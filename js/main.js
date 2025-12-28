@@ -652,6 +652,36 @@ function initGiraSelector() {
             timelineObserver.observe(item);
         });
     }
+
+    // Back buttons functionality
+    const voltarBtns = document.querySelectorAll('[data-voltar-gira]');
+    const seletor = document.querySelector('.cronologia__seletor');
+
+    voltarBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Hide all gira containers
+            giraContainers.forEach(container => {
+                container.classList.remove('active');
+            });
+
+            // Remove active from all buttons
+            giraBtns.forEach(b => b.classList.remove('active'));
+
+            // Scroll to selector with smooth animation
+            if (seletor) {
+                seletor.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+
+                // Add a highlight effect to selector
+                seletor.style.animation = 'pulseHighlight 1s ease';
+                setTimeout(() => {
+                    seletor.style.animation = '';
+                }, 1000);
+            }
+        });
+    });
 }
 
 /**

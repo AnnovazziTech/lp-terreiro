@@ -3280,6 +3280,78 @@ strong {
     font-size: 0.8rem;
 }
 
+/* Botão Voltar Gira */
+.gira__voltar {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--border-light);
+}
+
+.btn--voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--bg-accent);
+    color: var(--text-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-full);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.btn--voltar:hover {
+    background: var(--accent-gold);
+    color: var(--bg-dark);
+    border-color: var(--accent-gold);
+    transform: translateX(-4px);
+}
+
+.btn--voltar svg {
+    transition: transform var(--transition-fast);
+}
+
+.btn--voltar:hover svg {
+    transform: translateX(-3px);
+}
+
+/* Esquerda style */
+.gira--esquerda .gira__voltar {
+    border-top-color: rgba(139, 0, 0, 0.2);
+}
+
+.gira--esquerda .btn--voltar {
+    background: rgba(139, 0, 0, 0.1);
+    border-color: rgba(139, 0, 0, 0.3);
+    color: #8B0000;
+}
+
+.gira--esquerda .btn--voltar:hover {
+    background: #8B0000;
+    color: #FFFFFF;
+    border-color: #8B0000;
+}
+
+/* Animation for highlight when returning */
+@keyframes pulseHighlight {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.4);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 10px rgba(201, 162, 39, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(201, 162, 39, 0);
+    }
+}
+
 /* Responsivo Cronologia */
 @media (max-width: 768px) {
     .cronologia__chegada {
@@ -3322,6 +3394,18 @@ strong {
 
     .gira__header h3 {
         font-size: 1.4rem;
+    }
+
+    .gira__voltar {
+        margin-top: var(--space-lg);
+        padding-top: var(--space-md);
+    }
+
+    .btn--voltar {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+        padding: var(--space-md) var(--space-lg);
     }
 }
 
