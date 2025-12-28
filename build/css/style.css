@@ -430,11 +430,39 @@ strong {
     .sidebar__link {
         padding: var(--space-sm);
         justify-content: center;
+        border-left: none;
+        border-radius: var(--radius-md);
+        margin: 2px var(--space-xs);
+        position: relative;
+    }
+
+    .sidebar__link:hover {
+        border-left: none;
+    }
+
+    .sidebar__link.active {
+        border-left: none;
+        background: rgba(201, 162, 39, 0.2);
+        box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.3);
     }
 
     .sidebar.expanded .sidebar__link {
         justify-content: flex-start;
         padding: var(--space-sm) var(--space-lg);
+        border-radius: 0;
+        margin: 2px 0;
+        border-left: 3px solid transparent;
+        box-shadow: none;
+    }
+
+    .sidebar.expanded .sidebar__link:hover {
+        border-left-color: rgba(201, 162, 39, 0.5);
+    }
+
+    .sidebar.expanded .sidebar__link.active {
+        border-left-color: var(--accent-gold);
+        background: rgba(201, 162, 39, 0.15);
+        box-shadow: none;
     }
 
     /* Botão toggle visível no desktop */
