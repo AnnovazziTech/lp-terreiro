@@ -207,6 +207,9 @@ function initOrixasFilter() {
     const filterBtns = document.querySelectorAll('.filter__btn');
     const orixaCards = document.querySelectorAll('.orixa__card');
 
+    // Skip if elements don't exist (different page)
+    if (!filterBtns.length || !orixaCards.length) return;
+
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const filter = btn.dataset.filter;
@@ -326,21 +329,25 @@ function throttle(func, limit = 100) {
 /**
  * Trono Card Hover Effect
  */
-document.querySelectorAll('.trono__card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-10px) scale(1.02)';
-    });
+const tronoCards = document.querySelectorAll('.trono__card');
+if (tronoCards.length) {
+    tronoCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-10px) scale(1.02)';
+        });
 
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0) scale(1)';
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0) scale(1)';
+        });
     });
-});
+}
 
 /**
  * Orixa Card Click to Expand (Mobile)
  */
-if (window.innerWidth <= 768) {
-    document.querySelectorAll('.orixa__card').forEach(card => {
+const orixaCardsForMobile = document.querySelectorAll('.orixa__card');
+if (window.innerWidth <= 768 && orixaCardsForMobile.length) {
+    orixaCardsForMobile.forEach(card => {
         const body = card.querySelector('.orixa__body');
 
         card.addEventListener('click', () => {
