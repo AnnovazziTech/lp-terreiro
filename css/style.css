@@ -2367,6 +2367,751 @@ strong {
 }
 
 /* ===================================
+   Linha dos Ciganos Section
+   =================================== */
+.ciganos {
+    background: linear-gradient(135deg, #FFF8E7 0%, #FFF5F5 50%, #F5F0FF 100%);
+}
+
+/* Santa Sara Kali */
+.ciganos__santa-sara {
+    background: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--space-2xl);
+    border: 1px solid var(--border-light);
+}
+
+.santa-sara__header {
+    background: linear-gradient(135deg, #8B0000 0%, #DC143C 100%);
+    color: var(--text-light);
+    padding: var(--space-xl);
+    text-align: center;
+}
+
+.santa-sara__nome {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin: 0 0 var(--space-xs);
+    color: #FFD700;
+}
+
+.santa-sara__titulo {
+    display: block;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: var(--space-xs);
+}
+
+.santa-sara__data {
+    display: inline-block;
+    background: rgba(255, 215, 0, 0.2);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-full);
+    font-size: 0.9rem;
+    margin-top: var(--space-sm);
+}
+
+.santa-sara__content {
+    padding: var(--space-xl);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+    gap: var(--space-xl);
+}
+
+.santa-sara__historia h4,
+.santa-sara__culto h4 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: #8B0000;
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid #DC143C33;
+}
+
+.santa-sara__historia p,
+.santa-sara__culto p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+    text-align: justify;
+}
+
+/* Ciganos na Umbanda */
+.ciganos__linha {
+    margin-bottom: var(--space-2xl);
+}
+
+.linha__titulo {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.linha__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: var(--space-lg);
+}
+
+.linha__card {
+    background: var(--bg-primary);
+    padding: var(--space-xl);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+    transition: all var(--transition-normal);
+}
+
+.linha__card:hover {
+    border-color: #DC143C;
+    box-shadow: var(--shadow-md);
+}
+
+.linha__card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: #8B0000;
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid #DC143C22;
+}
+
+.linha__card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-sm);
+}
+
+.linha__lista {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-md) 0 0;
+}
+
+.linha__lista li {
+    padding: var(--space-xs) 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.linha__lista li:last-child {
+    border-bottom: none;
+}
+
+.linha__lista strong {
+    color: #8B0000;
+}
+
+/* Cores dos Ciganos */
+.ciganos__cores {
+    background: var(--bg-primary);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+}
+
+.cores__titulo {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: var(--space-md);
+}
+
+.cores__intro {
+    text-align: center;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto var(--space-xl);
+    line-height: 1.7;
+}
+
+.cores__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: var(--space-md);
+}
+
+.cor__card {
+    background: var(--bg-secondary);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    text-align: center;
+    transition: all var(--transition-normal);
+}
+
+.cor__card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.cor__amostra {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-full);
+    background: var(--cor-cigana);
+    margin: 0 auto var(--space-md);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.cor__amostra--sete {
+    background: linear-gradient(135deg,
+        #DC143C 0%,
+        #FF8C00 16%,
+        #FFD700 32%,
+        #228B22 48%,
+        #4169E1 64%,
+        #FF69B4 80%,
+        #FFFFFF 100%);
+}
+
+.cor__card h4 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.cor__card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.cores__alerta {
+    margin-top: var(--space-xl);
+    padding: var(--space-md) var(--space-lg);
+    background: #FFF3CD;
+    border: 1px solid #FFCC00;
+    border-radius: var(--radius-md);
+    text-align: center;
+    color: #856404;
+}
+
+.cores__alerta strong {
+    color: #664d03;
+}
+
+/* Responsivo Ciganos */
+@media (max-width: 768px) {
+    .santa-sara__nome {
+        font-size: 1.5rem;
+    }
+
+    .santa-sara__content {
+        padding: var(--space-lg);
+    }
+
+    .santa-sara__historia p,
+    .santa-sara__culto p {
+        text-align: left;
+    }
+
+    .linha__titulo,
+    .cores__titulo {
+        font-size: 1.5rem;
+    }
+
+    .cores__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .cores__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .santa-sara__header {
+        padding: var(--space-lg);
+    }
+}
+
+/* ===================================
+   Cronologia das Giras Section
+   =================================== */
+.cronologia {
+    background: var(--bg-secondary);
+}
+
+/* Chegada ao Terreiro */
+.cronologia__chegada {
+    background: linear-gradient(135deg, #F8F5F0 0%, #FFFFFF 100%);
+    border: 2px solid var(--accent-gold);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    margin-bottom: var(--space-2xl);
+    display: flex;
+    gap: var(--space-xl);
+    align-items: flex-start;
+}
+
+.chegada__icon {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background: var(--accent-gold);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chegada__icon svg {
+    width: 40px;
+    height: 40px;
+    stroke: white;
+}
+
+.chegada__content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.chegada__intro {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-lg);
+    font-size: 1.05rem;
+}
+
+.chegada__passos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    gap: var(--space-md);
+}
+
+.chegada__passo {
+    display: flex;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: var(--bg-primary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+    transition: all var(--transition-normal);
+}
+
+.chegada__passo:hover {
+    border-color: var(--accent-gold);
+    box-shadow: var(--shadow-sm);
+}
+
+.passo__numero {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background: var(--accent-gold);
+    color: white;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.passo__content strong {
+    display: block;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.passo__content p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Seletor de Giras */
+.cronologia__seletor {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.gira__btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-xl);
+    border: 2px solid var(--border-light);
+    background: var(--bg-primary);
+    border-radius: var(--radius-full);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.gira__btn:hover {
+    border-color: var(--accent-gold);
+    color: var(--text-primary);
+}
+
+.gira__btn.active {
+    background: var(--accent-gold);
+    border-color: var(--accent-gold);
+    color: white;
+}
+
+.gira__btn[data-gira="esquerda"].active {
+    background: #8B0000;
+    border-color: #8B0000;
+}
+
+.gira__btn-icon {
+    font-size: 1.3rem;
+}
+
+/* Container das Giras */
+.gira__container {
+    display: none;
+}
+
+.gira__container.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header da Gira */
+.gira__header {
+    text-align: center;
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.gira__header--direita {
+    background: linear-gradient(135deg, #C9A227 0%, #D4AF37 50%, #E8C547 100%);
+    color: #1a1a2e;
+}
+
+.gira__header--esquerda {
+    background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 50%, #8B0000 100%);
+    color: #FFFFFF;
+}
+
+.gira__header--esquerda h3,
+.gira__header--esquerda p {
+    color: #FFFFFF;
+}
+
+.gira__header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    margin-bottom: var(--space-sm);
+}
+
+.gira__header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Intro Esquerda */
+.gira__intro-esquerda {
+    background: rgba(139, 0, 0, 0.05);
+    border-left: 4px solid #8B0000;
+    padding: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.gira__intro-esquerda p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Timeline */
+.gira__timeline {
+    position: relative;
+    padding-left: 60px;
+}
+
+.gira__timeline::before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--accent-gold), var(--accent-gold-light));
+    border-radius: 3px;
+}
+
+.gira__timeline--esquerda::before {
+    background: linear-gradient(to bottom, #8B0000, #DC143C);
+}
+
+.timeline__item {
+    position: relative;
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-lg);
+}
+
+.timeline__item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.timeline__marker {
+    position: absolute;
+    left: -60px;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background: var(--bg-primary);
+    border: 3px solid var(--accent-gold);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.timeline__marker--esquerda {
+    border-color: #8B0000;
+}
+
+.timeline__marker--final {
+    background: var(--accent-gold);
+}
+
+.timeline__marker--esquerda.timeline__marker--final {
+    background: #8B0000;
+    border-color: #8B0000;
+}
+
+.marker__numero {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+}
+
+.timeline__marker--final .marker__numero {
+    color: white;
+}
+
+.timeline__marker--esquerda .marker__numero {
+    color: #8B0000;
+}
+
+.timeline__marker--esquerda.timeline__marker--final .marker__numero {
+    color: white;
+}
+
+.timeline__content {
+    background: var(--bg-primary);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+    transition: all var(--transition-normal);
+}
+
+.timeline__content:hover {
+    border-color: var(--accent-gold);
+    box-shadow: var(--shadow-md);
+}
+
+.gira__timeline--esquerda .timeline__content:hover {
+    border-color: #DC143C;
+}
+
+.timeline__content h4 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.timeline__content p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+}
+
+.timeline__content p:last-child {
+    margin-bottom: 0;
+}
+
+.timeline__detalhe {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-xs) var(--space-md);
+    background: var(--bg-accent);
+    border-radius: var(--radius-full);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.timeline__detalhe--destaque {
+    background: var(--accent-gold-light);
+    color: var(--accent-gold-hover);
+    font-weight: 500;
+}
+
+.timeline__detalhe--esquerda {
+    background: rgba(139, 0, 0, 0.1);
+    color: #8B0000;
+}
+
+.timeline__detalhe--orixa {
+    background: var(--orixa-cor);
+    color: var(--orixa-texto);
+    border: 1px solid var(--border-light);
+}
+
+.detalhe__icon {
+    font-size: 1rem;
+}
+
+/* Letra do Ponto */
+.timeline__letra {
+    background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-md);
+    margin: var(--space-md) 0;
+}
+
+.timeline__letra p {
+    color: #FFD700;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 0;
+    text-align: center;
+}
+
+/* Observações */
+.gira__observacao {
+    background: rgba(139, 0, 0, 0.05);
+    border: 1px solid rgba(139, 0, 0, 0.2);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.gira__observacao h4 {
+    font-family: var(--font-heading);
+    color: #8B0000;
+    margin-bottom: var(--space-md);
+}
+
+.gira__observacao ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.gira__observacao li {
+    padding: var(--space-xs) 0;
+    color: var(--text-secondary);
+    padding-left: var(--space-lg);
+    position: relative;
+}
+
+.gira__observacao li::before {
+    content: '⚠️';
+    position: absolute;
+    left: 0;
+    font-size: 0.8rem;
+}
+
+/* Responsivo Cronologia */
+@media (max-width: 768px) {
+    .cronologia__chegada {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .chegada__icon {
+        margin: 0 auto;
+    }
+
+    .cronologia__seletor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gira__btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+
+    .gira__timeline {
+        padding-left: 50px;
+    }
+
+    .gira__timeline::before {
+        left: 18px;
+    }
+
+    .timeline__marker {
+        left: -50px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .marker__numero {
+        font-size: 0.9rem;
+    }
+
+    .gira__header h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gira__timeline {
+        padding-left: 40px;
+    }
+
+    .gira__timeline::before {
+        left: 14px;
+    }
+
+    .timeline__marker {
+        left: -40px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .marker__numero {
+        font-size: 0.8rem;
+    }
+
+    .timeline__content {
+        padding: var(--space-md);
+    }
+
+    .timeline__content h4 {
+        font-size: 1rem;
+    }
+
+    .timeline__detalhe {
+        font-size: 0.8rem;
+        flex-wrap: wrap;
+    }
+}
+
+/* ===================================
    Rituais Section
    =================================== */
 .rituais__grid {

@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initCookieConsent();
     initPrivacyModal();
+    initGiraSelector();
 });
 
 /**
@@ -566,6 +567,59 @@ function initPrivacyModal() {
         modal.classList.remove('active');
         modal.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+    }
+}
+
+/**
+ * Gira Selector Module
+ */
+function initGiraSelector() {
+    const giraBtns = document.querySelectorAll('.gira__btn');
+    const giraContainers = document.querySelectorAll('.gira__container');
+
+    if (!giraBtns.length) return;
+
+    giraBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const giraType = btn.dataset.gira;
+
+            // Update active button
+            giraBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Show corresponding gira container
+            giraContainers.forEach(container => {
+                container.classList.remove('active');
+                if (container.id === `gira-${giraType}`) {
+                    container.classList.add('active');
+                }
+            });
+        });
+    });
+
+    // Add animation to timeline items on scroll
+    const timelineItems = document.querySelectorAll('.timeline__item');
+
+    if (timelineItems.length && 'IntersectionObserver' in window) {
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Add staggered animation delay
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateX(0)';
+                    }, index * 100);
+                    timelineObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        timelineItems.forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateX(-20px)';
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            timelineObserver.observe(item);
+        });
     }
 }
 
