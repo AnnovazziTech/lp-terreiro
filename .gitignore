@@ -1,0 +1,13 @@
+# PDFs
+*.pdf
+
+# Arquivos de análise
+Analise_*.md
+Análise_*.md
+
+# Claude settings
+.claude/
+
+# OS files
+.DS_Store
+Thumbs.db
