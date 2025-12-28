@@ -93,6 +93,35 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Custom Scrollbar - Discreto e Integrado */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(201, 162, 39, 0.3);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(201, 162, 39, 0.5);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(201, 162, 39, 0.3) transparent;
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
@@ -273,6 +302,25 @@ strong {
     flex: 1;
     overflow-y: auto;
     padding: var(--space-md) 0;
+    margin-right: 0;
+}
+
+/* Scrollbar do menu na borda direita */
+.sidebar__nav::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar__nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar__nav::-webkit-scrollbar-thumb {
+    background: rgba(201, 162, 39, 0.4);
+    border-radius: 4px;
+}
+
+.sidebar__nav::-webkit-scrollbar-thumb:hover {
+    background: rgba(201, 162, 39, 0.6);
 }
 
 .sidebar__list {
@@ -296,6 +344,8 @@ strong {
     transition: all var(--transition-fast);
     border-left: 3px solid transparent;
     text-decoration: none;
+    cursor: pointer;
+    min-height: 44px;
 }
 
 .sidebar__link:hover {
@@ -317,15 +367,18 @@ strong {
     width: 24px;
     height: 24px;
     flex-shrink: 0;
+    pointer-events: none;
 }
 
 .sidebar__icon svg {
     width: 20px;
     height: 20px;
+    pointer-events: none;
 }
 
 .sidebar__text {
     white-space: nowrap;
+    pointer-events: none;
 }
 
 /* Sidebar Overlay */
@@ -427,41 +480,42 @@ strong {
         width: auto;
     }
 
+    /* Menu comprimido - ícones centralizados */
     .sidebar__link {
         padding: var(--space-sm);
         justify-content: center;
         border-left: none;
         border-radius: var(--radius-md);
-        margin: 2px var(--space-xs);
-        position: relative;
+        margin: 4px var(--space-xs);
     }
 
     .sidebar__link:hover {
         border-left: none;
+        background: rgba(255, 255, 255, 0.08);
     }
 
     .sidebar__link.active {
         border-left: none;
         background: rgba(201, 162, 39, 0.2);
-        box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.3);
     }
 
+    /* Menu expandido - estilo original */
     .sidebar.expanded .sidebar__link {
         justify-content: flex-start;
         padding: var(--space-sm) var(--space-lg);
         border-radius: 0;
         margin: 2px 0;
         border-left: 3px solid transparent;
-        box-shadow: none;
     }
 
     .sidebar.expanded .sidebar__link:hover {
         border-left-color: rgba(201, 162, 39, 0.5);
+        background: rgba(255, 255, 255, 0.05);
     }
 
     .sidebar.expanded .sidebar__link.active {
         border-left-color: var(--accent-gold);
-        background: rgba(201, 162, 39, 0.15);
+        background: rgba(201, 162, 39, 0.1);
         box-shadow: none;
     }
 
@@ -469,9 +523,10 @@ strong {
     .sidebar__toggle {
         display: flex;
         top: var(--space-md);
-        left: calc(var(--sidebar-collapsed-width) + var(--space-sm));
-        width: 40px;
-        height: 40px;
+        left: calc(var(--sidebar-collapsed-width) + var(--space-xs));
+        width: 36px;
+        height: 36px;
+        border-radius: var(--radius-md);
         transition: left var(--transition-normal), transform var(--transition-normal), background var(--transition-normal);
     }
 
