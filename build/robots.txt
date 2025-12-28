@@ -1,0 +1,14 @@
+# Robots.txt - Templo de Umbanda Guardião da Luz
+# https://templogdl.com.br
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://templogdl.com.br/sitemap.xml
+
+# Crawl-delay (optional)
+Crawl-delay: 1
+
+# Disallow access to any hidden files
+Disallow: /.*
