@@ -285,8 +285,10 @@ function initSmoothScroll() {
             const target = document.querySelector(href);
 
             if (target) {
-                const headerHeight = document.getElementById('header').offsetHeight;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                // Get header height if exists, otherwise use page-header or default
+                const pageHeader = document.querySelector('.page-header');
+                const headerHeight = pageHeader ? pageHeader.offsetHeight : 56;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
 
                 window.scrollTo({
                     top: targetPosition,
