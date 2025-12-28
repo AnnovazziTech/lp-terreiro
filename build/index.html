@@ -43,45 +43,65 @@
     <link rel="canonical" href="https://templogdl.com.br">
 </head>
 <body>
-    <!-- Header / Navigation -->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#home" class="nav__logo">
-                <img src="img/logo.jpeg" alt="Logo Templo de Umbanda Guardião da Luz" class="nav__logo-img">
-                <span class="nav__logo-text">Guardião da Luz</span>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+            <a href="#home" class="sidebar__logo">
+                <img src="img/logo.jpeg" alt="Logo Templo de Umbanda Guardião da Luz" class="sidebar__logo-img">
             </a>
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active">Início</a></li>
-                    <li class="nav__item"><a href="#sobre" class="nav__link">Sobre</a></li>
-                    <li class="nav__item"><a href="#historia" class="nav__link">História</a></li>
-                    <li class="nav__item"><a href="#teologia" class="nav__link">Teologia</a></li>
-                    <li class="nav__item"><a href="#tronos" class="nav__link">7 Tronos</a></li>
-                    <li class="nav__item"><a href="#orixas" class="nav__link">Orixás</a></li>
-                    <li class="nav__item"><a href="#hierarquia" class="nav__link">Hierarquia</a></li>
-                    <li class="nav__item"><a href="#ciganos" class="nav__link">Ciganos</a></li>
-                    <li class="nav__item"><a href="#rituais" class="nav__link">Rituais</a></li>
-                    <li class="nav__item"><a href="#cronologia" class="nav__link">Giras</a></li>
-                    <li class="nav__item"><a href="#glossario" class="nav__link">Glossário</a></li>
-                    <li class="nav__item"><a href="#funcionamento" class="nav__link">Funcionamento</a></li>
-                    <li class="nav__item"><a href="#localizacao" class="nav__link">Local</a></li>
-                </ul>
-                <button class="nav__close" id="nav-close">
-                    <span></span>
-                </button>
-            </div>
-            <button class="nav__toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+        </div>
+        <nav class="sidebar__nav">
+            <ul class="sidebar__list">
+                <!-- Início e Funcionamento -->
+                <li class="sidebar__item"><a href="#home" class="sidebar__link active"><span class="sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span><span class="sidebar__text">Início</span></a></li>
+                <li class="sidebar__item"><a href="#funcionamento" class="sidebar__link"><span class="sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><span class="sidebar__text">Horários</span></a></li>
+                <li class="sidebar__item"><a href="#cronologia" class="sidebar__link"><span class="sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span class="sidebar__text">Giras</span></a></li>
+                <!-- O que é Umbanda -->
+                <li class="sidebar__item"><a href="#historia" class="sidebar__link"><span class="sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span><span class="sidebar__text">História</span></a></li>
+                <li class="sidebar__item"><a href="#teologia" class="sidebar__link"><span class="sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="sidebar__text">Teologia</span></a></li>
+                <li class="sidebar__item"><a href="#tronos" class="sidebar__link"><span class="sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span><span class="sidebar__text">7 Tronos</span></a></li>
+                <li class="sidebar__item"><a href="#orixas" class="sidebar__link"><span class="sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><span class="sidebar__text">Orixás</span></a></li>
+                <li class="sidebar__item"><a href="#guias" class="sidebar__link"><span class="sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><span class="sidebar__text">Linhas</span></a></li>
+                <li class="sidebar__item"><a href="#ciganos" class="sidebar__link"><span class="sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></span><span class="sidebar__text">Ciganos</span></a></li>
+                <li class="sidebar__item"><a href="#hierarquia" class="sidebar__link"><span class="sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></span><span class="sidebar__text">Hierarquia</span></a></li>
+                <li class="sidebar__item"><a href="#rituais" class="sidebar__link"><span class="sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span><span class="sidebar__text">Rituais</span></a></li>
+                <li class="sidebar__item"><a href="#elementos" class="sidebar__link"><span class="sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span><span class="sidebar__text">Elementos</span></a></li>
+                <li class="sidebar__item"><a href="#etica" class="sidebar__link"><span class="sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span><span class="sidebar__text">Ética</span></a></li>
+                <li class="sidebar__item"><a href="#glossario" class="sidebar__link"><span class="sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span><span class="sidebar__text">Glossário</span></a></li>
+                <!-- Nossa Casa -->
+                <li class="sidebar__item"><a href="#sobre" class="sidebar__link"><span class="sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></span><span class="sidebar__text">O Templo</span></a></li>
+                <li class="sidebar__item"><a href="#fundamentos" class="sidebar__link"><span class="sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><span class="sidebar__text">Fundamentos</span></a></li>
+                <li class="sidebar__item"><a href="#localizacao" class="sidebar__link"><span class="sidebar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span class="sidebar__text">Local</span></a></li>
+            </ul>
         </nav>
-    </header>
+    </aside>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar__overlay" id="sidebar-overlay"></div>
+
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar__toggle" id="sidebar-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
     <main>
         <!-- Hero Section -->
+
         <section class="hero" id="home">
             <div class="hero__overlay"></div>
+            <!-- Pontos Riscados Animados -->
+            <div class="hero__pontos">
+                <div class="ponto ponto--1"></div>
+                <div class="ponto ponto--2"></div>
+                <div class="ponto ponto--3"></div>
+                <div class="ponto ponto--4"></div>
+                <div class="ponto ponto--5"></div>
+                <div class="ponto ponto--6"></div>
+                <div class="ponto ponto--7"></div>
+                <div class="ponto ponto--8"></div>
+            </div>
             <div class="hero__content container">
                 <img src="img/logo.jpeg" alt="Logo Templo de Umbanda Guardião da Luz" class="hero__logo">
                 <h1 class="hero__title">Templo de Umbanda<br><span>Guardião da Luz</span></h1>
@@ -94,97 +114,404 @@
             </div>
         </section>
 
-        <!-- Sobre Section -->
-        <section class="section sobre" id="sobre">
+
+        <section class="section funcionamento" id="funcionamento">
             <div class="container">
-                <h2 class="section__title">Sobre o Templo</h2>
-                <p class="section__subtitle">Conheça nossa casa e missão</p>
+                <h2 class="section__title">Funcionamento da Casa</h2>
+                <p class="section__subtitle">Nossos dias de trabalho e atendimento</p>
 
-                <div class="sobre__grid">
-                    <div class="sobre__card">
-                        <div class="sobre__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                            </svg>
+                <div class="funcionamento__grid">
+                    <div class="dia__card dia__card--destaque">
+                        <div class="dia__header">
+                            <span class="dia__nome">Quarta-feira</span>
+                            <span class="dia__titulo">Quarta das Cartas</span>
                         </div>
-                        <h3>Orixá Regente</h3>
-                        <p><strong>Oxalá</strong> é o Orixá regente da nossa casa, trazendo a energia da fé, da paz e da criação divina.</p>
+                        <div class="dia__body">
+                            <p class="dia__descricao">Atendimento gratuito ao público com tiragem de cartas. Venha buscar orientação espiritual através do oráculo.</p>
+                            <div class="dia__horarios">
+                                <div class="horario__item">
+                                    <span class="horario__label">Distribuição de Fichas</span>
+                                    <strong class="horario__valor">a partir das 19:30</strong>
+                                </div>
+                                <div class="horario__item">
+                                    <span class="horario__label">Início da Tiragem</span>
+                                    <strong class="horario__valor">20:30</strong>
+                                </div>
+                            </div>
+                            <div class="dia__info">
+                                <div class="info__item">
+                                    <span class="info__label">Formato</span>
+                                    <span class="info__valor">3 perguntas por consulente</span>
+                                </div>
+                                <div class="info__item">
+                                    <span class="info__label">Custo</span>
+                                    <span class="info__valor destacado">Gratuito</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="sobre__card">
-                        <div class="sobre__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M12 6v6l4 2"/>
-                            </svg>
+                    <div class="dia__card">
+                        <div class="dia__header">
+                            <span class="dia__nome">Sexta-feira</span>
+                            <span class="dia__titulo">Dia de Gira</span>
                         </div>
-                        <h3>Força Atuante</h3>
-                        <p><strong>Omolu</strong> também atua fortemente nos trabalhos da casa, trazendo a energia da cura e transformação.</p>
-                    </div>
-
-                    <div class="sobre__card">
-                        <div class="sobre__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            </svg>
-                        </div>
-                        <h3>Guia Chefe</h3>
-                        <p><strong>Exu Lucifer</strong> é o guia chefe da casa, responsável pela proteção e abertura dos caminhos.</p>
-                    </div>
-
-                    <div class="sobre__card">
-                        <div class="sobre__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-                            </svg>
-                        </div>
-                        <h3>Nossa Teologia</h3>
-                        <p>Cultuamos os <strong>14 Orixás dos 7 Tronos</strong>. <strong>Sem sincretismo</strong>: Oxalá é Oxalá, Jesus é Jesus.</p>
-                    </div>
-                </div>
-
-                <div class="sobre__estrutura">
-                    <h3>Estrutura Espiritual da Casa</h3>
-                    <div class="sobre__estrutura-grid">
-                        <div class="estrutura__item">
-                            <span class="estrutura__label">Congá</span>
-                            <p>Nosso Congá é sagrado e possui a esquerda presente, representando a dualidade e o equilíbrio das forças.</p>
-                        </div>
-                        <div class="estrutura__item">
-                            <span class="estrutura__label">Tronqueira</span>
-                            <p>Possuímos tronqueira com a esquerda, local sagrado de firmeza dos Exus e Pombagiras guardiões.</p>
-                        </div>
-                        <div class="estrutura__item">
-                            <span class="estrutura__label">Cruzeiro</span>
-                            <p>Símbolo sagrado de proteção e fé, representa a ligação entre o plano terreno e o espiritual, firmando a força da casa.</p>
-                        </div>
-                        <div class="estrutura__item">
-                            <span class="estrutura__label">Atabaque</span>
-                            <p>Instrumento sagrado que conduz os pontos cantados e mantém a vibração espiritual durante as giras, conectando-nos aos Orixás.</p>
-                        </div>
-                        <div class="estrutura__item">
-                            <span class="estrutura__label">Plantas Sagradas</span>
-                            <p>Comigo-ninguém-pode, Espada de São Jorge, Espada de Santa Bárbara e Rosa Branca protegem e purificam o ambiente espiritual.</p>
-                        </div>
-                        <div class="estrutura__item">
-                            <span class="estrutura__label">Ferradura e Prego</span>
-                            <p>Elementos de proteção ligados a Ogum, afastam energias negativas e firmam a segurança espiritual do terreiro.</p>
-                        </div>
-                        <div class="estrutura__item">
-                            <span class="estrutura__label">Caldeirão</span>
-                            <p>Instrumento sagrado utilizado na realização de magias e trabalhos espirituais, concentrando e direcionando as energias rituais.</p>
-                        </div>
-                        <div class="estrutura__item">
-                            <span class="estrutura__label">Imagens Sagradas</span>
-                            <p>Representações dos Orixás e entidades que compõem o Congá, canalizando as energias divinas durante os trabalhos.</p>
+                        <div class="dia__body">
+                            <p class="dia__descricao">Nosso dia sagrado de trabalhos espirituais, onde as entidades se manifestam para atender os filhos e consulentes.</p>
+                            <div class="dia__horarios">
+                                <div class="horario__item">
+                                    <span class="horario__label">Distribuição de Fichas</span>
+                                    <strong class="horario__valor">a partir das 19:30</strong>
+                                </div>
+                                <div class="horario__item">
+                                    <span class="horario__label">Início da Gira</span>
+                                    <strong class="horario__valor">20:30</strong>
+                                </div>
+                            </div>
+                            <div class="giras__calendario">
+                                <div class="gira__item">
+                                    <span class="gira__periodo">Início do Mês</span>
+                                    <strong class="gira__tipo">Gira de Esquerda</strong>
+                                </div>
+                                <div class="gira__item">
+                                    <span class="gira__periodo">Final do Mês</span>
+                                    <strong class="gira__tipo">Gira de Preto Velho</strong>
+                                </div>
+                                <div class="gira__item">
+                                    <span class="gira__periodo">Demais Sextas</span>
+                                    <strong class="gira__tipo">Giras Variadas</strong>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="funcionamento__aviso">
+                    <p><strong>Importante:</strong> Todos os trabalhos espirituais são realizados sob orientação do Sacerdote. Para trabalhos específicos, consulte previamente a casa.</p>
+                </div>
+            </div>
+
+
+        <section class="section cronologia" id="cronologia">
+            <div class="container">
+                <h2 class="section__title">Cronologia das Giras</h2>
+                <p class="section__subtitle">O passo a passo dos trabalhos espirituais</p>
+
+                <!-- Chegada ao Terreiro -->
+                <div class="cronologia__chegada">
+                    <div class="chegada__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                            <polyline points="9,22 9,12 15,12 15,22"/>
+                        </svg>
+                    </div>
+                    <div class="chegada__content">
+                        <h3>Ao Chegar no Terreiro</h3>
+                        <p class="chegada__intro">Antes do início de qualquer gira, o filho da casa deve seguir este ritual de preparação:</p>
+                        <div class="chegada__passos">
+                            <div class="chegada__passo">
+                                <span class="passo__numero">1</span>
+                                <div class="passo__content">
+                                    <strong>Vestir a Roupa Ritual</strong>
+                                    <p>Coloque suas roupas brancas apropriadas para o trabalho espiritual, demonstrando respeito e pureza.</p>
+                                </div>
+                            </div>
+                            <div class="chegada__passo">
+                                <span class="passo__numero">2</span>
+                                <div class="passo__content">
+                                    <strong>Colocar as Guias</strong>
+                                    <p>Vista suas guias (colares sagrados) que representam sua ligação com os Orixás e entidades.</p>
+                                </div>
+                            </div>
+                            <div class="chegada__passo">
+                                <span class="passo__numero">3</span>
+                                <div class="passo__content">
+                                    <strong>Bater Cabeça para o Congá</strong>
+                                    <p>Dirija-se ao Congá (altar sagrado) e bata cabeça, saudando os Orixás e pedindo licença para participar dos trabalhos.</p>
+                                </div>
+                            </div>
+                            <div class="chegada__passo">
+                                <span class="passo__numero">4</span>
+                                <div class="passo__content">
+                                    <strong>Acender Vela no Cruzeiro</strong>
+                                    <p>Acenda sua vela do Anjo da Guarda no cruzeiro das almas, firmando sua proteção espiritual para o trabalho.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seletor de Giras -->
+                <div class="cronologia__seletor">
+                    <button class="gira__btn active" data-gira="direita">
+                        <span class="gira__btn-icon">☀️</span>
+                        Gira de Direita
+                    </button>
+                    <button class="gira__btn" data-gira="esquerda">
+                        <span class="gira__btn-icon">🌙</span>
+                        Gira de Esquerda
+                    </button>
+                </div>
+
+                <!-- Gira de Direita -->
+                <div class="gira__container gira--direita active" id="gira-direita">
+                    <div class="gira__header gira__header--direita">
+                        <h3>Gira de Direita</h3>
+                        <p>Trabalhos com Caboclos, Pretos Velhos, Crianças, Baianos e demais entidades de luz</p>
+                    </div>
+
+                    <div class="gira__timeline">
+                        <div class="timeline__item" data-step="1">
+                            <div class="timeline__marker">
+                                <span class="marker__numero">1</span>
+                            </div>
+                            <div class="timeline__content">
+                                <h4>Introdução</h4>
+                                <p>Momento de concentração e silêncio. Os médiuns se posicionam na assistência ou na corrente, conforme orientação dos sacerdotes. É o momento de aquietar a mente e se conectar espiritualmente.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item" data-step="2">
+                            <div class="timeline__marker">
+                                <span class="marker__numero">2</span>
+                            </div>
+                            <div class="timeline__content">
+                                <h4>Defumação</h4>
+                                <p>O ambiente é purificado com ervas sagradas. A fumaça remove energias negativas e prepara o espaço para a manifestação espiritual. Todos os presentes são defumados, limpando suas auras.</p>
+                                <div class="timeline__detalhe">
+                                    <span class="detalhe__icon">🌿</span>
+                                    <span>Ervas comuns: arruda, guiné, alecrim, alfazema</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item" data-step="3">
+                            <div class="timeline__marker">
+                                <span class="marker__numero">3</span>
+                            </div>
+                            <div class="timeline__content">
+                                <h4>Bater Cabeça para os Sacerdotes</h4>
+                                <p>Os médiuns da corrente batem cabeça para o Babalorixá e a Yalorixá, pedindo a bênção e demonstrando respeito à hierarquia sacerdotal. Este gesto reafirma o compromisso com a casa.</p>
+                                <div class="timeline__detalhe">
+                                    <span class="detalhe__icon">🙏</span>
+                                    <span>Gesto de humildade e reverência aos guias da casa</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item" data-step="4">
+                            <div class="timeline__marker">
+                                <span class="marker__numero">4</span>
+                            </div>
+                            <div class="timeline__content">
+                                <h4>Saúda a Esquerda</h4>
+                                <p>Saudação aos Exus e Pombagiras guardiões da casa, pedindo proteção e segurança para os trabalhos. Mesmo na gira de direita, a esquerda é saudada pois são os guardiões que protegem o terreiro.</p>
+                                <div class="timeline__detalhe">
+                                    <span class="detalhe__icon">🛡️</span>
+                                    <span>Laroye Exu! Salve o Povo da Rua!</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item" data-step="5">
+                            <div class="timeline__marker">
+                                <span class="marker__numero">5</span>
+                            </div>
+                            <div class="timeline__content">
+                                <h4>Hino da Umbanda</h4>
+                                <p>Canta-se o Hino da Umbanda, reafirmando a fé na religião e na força dos Orixás. É um momento de união e elevação espiritual de todos os presentes.</p>
+                                <div class="timeline__detalhe timeline__detalhe--destaque">
+                                    <span class="detalhe__icon">🎵</span>
+                                    <span>"Refletiu a luz divina, com todo seu esplendor..."</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item" data-step="6">
+                            <div class="timeline__marker">
+                                <span class="marker__numero">6</span>
+                            </div>
+                            <div class="timeline__content">
+                                <h4>Abertura da Gira</h4>
+                                <p>Os sacerdotes realizam a abertura oficial dos trabalhos, firmando os pontos de força e invocando a proteção dos Orixás para que a gira transcorra em paz e harmonia.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item" data-step="7">
+                            <div class="timeline__marker">
+                                <span class="marker__numero">7</span>
+                            </div>
+                            <div class="timeline__content">
+                                <h4>Oração do Pai Nosso</h4>
+                                <p>Reza-se o Pai Nosso, oração universal que conecta todos os presentes à energia divina do Criador, Olorum. É um momento de profunda conexão espiritual.</p>
+                                <div class="timeline__detalhe">
+                                    <span class="detalhe__icon">✝️</span>
+                                    <span>Oração de conexão com o Pai Maior</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item" data-step="8">
+                            <div class="timeline__marker">
+                                <span class="marker__numero">8</span>
+                            </div>
+                            <div class="timeline__content">
+                                <h4>Oração da Ave Maria</h4>
+                                <p>Reza-se a Ave Maria, honrando a energia feminina divina e as Yabás (Orixás femininas), especialmente Oxum e Iemanjá, mães protetoras de todos os filhos.</p>
+                                <div class="timeline__detalhe">
+                                    <span class="detalhe__icon">💙</span>
+                                    <span>Homenagem às energias femininas sagradas</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item" data-step="9">
+                            <div class="timeline__marker">
+                                <span class="marker__numero">9</span>
+                            </div>
+                            <div class="timeline__content">
+                                <h4>Saúda e Canta para Oxalá</h4>
+                                <p>Oxalá, o Pai de todos os Orixás, é saudado com pontos cantados. Sua energia de paz, amor e harmonia envolve todo o terreiro, abençoando os trabalhos.</p>
+                                <div class="timeline__detalhe timeline__detalhe--orixa" style="--orixa-cor: #FFFFFF; --orixa-texto: #1a1a2e;">
+                                    <span class="detalhe__icon">⚪</span>
+                                    <span>Epa Babá! Oxalá é o Pai!</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item" data-step="10">
+                            <div class="timeline__marker">
+                                <span class="marker__numero">10</span>
+                            </div>
+                            <div class="timeline__content">
+                                <h4>Saúda e Canta para Omolu</h4>
+                                <p>Omolu, o Senhor da Terra e das Almas, é saudado. Sua presença traz cura, transformação e a bênção ancestral dos que já partiram. Ele é o médico espiritual.</p>
+                                <div class="timeline__detalhe timeline__detalhe--orixa" style="--orixa-cor: #1C1C1C; --orixa-texto: #FFFFFF;">
+                                    <span class="detalhe__icon">⚫</span>
+                                    <span>Atoto Omolu! Atoto!</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item" data-step="11">
+                            <div class="timeline__marker">
+                                <span class="marker__numero">11</span>
+                            </div>
+                            <div class="timeline__content">
+                                <h4>Saúda e Canta para o Orixá Regente</h4>
+                                <p>O Orixá que rege a gira do dia é saudado com seus pontos específicos. Cada dia da semana possui um Orixá regente que traz sua vibração particular aos trabalhos.</p>
+                                <div class="timeline__detalhe">
+                                    <span class="detalhe__icon">👑</span>
+                                    <span>Varia conforme o dia e a determinação da casa</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item timeline__item--final" data-step="12">
+                            <div class="timeline__marker timeline__marker--final">
+                                <span class="marker__numero">12</span>
+                            </div>
+                            <div class="timeline__content">
+                                <h4>Chamada dos Guias</h4>
+                                <p>Momento culminante da gira! Os pontos de chamada são cantados para que as entidades se manifestem nos médiuns. Caboclos, Pretos Velhos, Crianças, Baianos e outras entidades de luz descem para trabalhar em prol dos consulentes.</p>
+                                <div class="timeline__detalhe timeline__detalhe--destaque">
+                                    <span class="detalhe__icon">✨</span>
+                                    <span>Início dos trabalhos de caridade e atendimento</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gira de Esquerda -->
+                <div class="gira__container gira--esquerda" id="gira-esquerda">
+                    <div class="gira__header gira__header--esquerda">
+                        <h3>Gira de Esquerda</h3>
+                        <p>Trabalhos com Exus e Pombagiras - Os guardiões e protetores</p>
+                    </div>
+
+                    <div class="gira__intro-esquerda">
+                        <p>A Gira de Esquerda é dedicada aos Exus e Pombagiras, entidades que trabalham na linha de proteção, defesa e abertura de caminhos. São espíritos de luz que atuam nas demandas mais pesadas e na quebra de magias negativas.</p>
+                    </div>
+
+                    <div class="gira__timeline gira__timeline--esquerda">
+                        <div class="timeline__item" data-step="1">
+                            <div class="timeline__marker timeline__marker--esquerda">
+                                <span class="marker__numero">1</span>
+                            </div>
+                            <div class="timeline__content">
+                                <h4>Introdução</h4>
+                                <p>Momento de concentração e preparação espiritual. O ambiente é mais reservado, com iluminação reduzida (geralmente apenas velas). Os médiuns se preparam para receber as entidades da esquerda.</p>
+                                <div class="timeline__detalhe timeline__detalhe--esquerda">
+                                    <span class="detalhe__icon">🕯️</span>
+                                    <span>Ambiente preparado com velas vermelhas e pretas</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item" data-step="2">
+                            <div class="timeline__marker timeline__marker--esquerda">
+                                <span class="marker__numero">2</span>
+                            </div>
+                            <div class="timeline__content">
+                                <h4>Abertura da Gira</h4>
+                                <p>Os sacerdotes realizam a abertura dos trabalhos, firmando os pontos de Exu e invocando a proteção do Exu Guardião da casa. É pedida licença aos guardiões para que os trabalhos se realizem em ordem e segurança.</p>
+                                <div class="timeline__detalhe timeline__detalhe--esquerda">
+                                    <span class="detalhe__icon">🔥</span>
+                                    <span>Firma-se o ponto do Exu Chefe da Casa</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item" data-step="3">
+                            <div class="timeline__marker timeline__marker--esquerda">
+                                <span class="marker__numero">3</span>
+                            </div>
+                            <div class="timeline__content">
+                                <h4>Saúda Ogum</h4>
+                                <p>Ogum é saudado como o grande guerreiro e protetor. Ele é invocado para abrir os caminhos e garantir a segurança espiritual de todos durante a gira. Sua força é essencial para os trabalhos de esquerda.</p>
+                                <div class="timeline__detalhe timeline__detalhe--esquerda">
+                                    <span class="detalhe__icon">⚔️</span>
+                                    <span>Ogunhê! Patakori Ogum!</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item timeline__item--final" data-step="4">
+                            <div class="timeline__marker timeline__marker--esquerda timeline__marker--final">
+                                <span class="marker__numero">4</span>
+                            </div>
+                            <div class="timeline__content">
+                                <h4>O Sino da Igrejinha</h4>
+                                <p>Canta-se o ponto "O Sino da Igrejinha", marcando o início oficial da chamada dos guias de esquerda. Este é um dos pontos mais tradicionais e emocionantes da Umbanda.</p>
+                                <div class="timeline__letra">
+                                    <p><em>"O sino da igrejinha faz belém-blem-blom...</em></p>
+                                    <p><em>Deu meia-noite, o galo já cantou...</em></p>
+                                    <p><em>Seu Exu que é dono da gira, ô corre gira que Ogum mandou!"</em></p>
+                                </div>
+                                <div class="timeline__detalhe timeline__detalhe--destaque timeline__detalhe--esquerda">
+                                    <span class="detalhe__icon">🔔</span>
+                                    <span>Início da manifestação dos Exus e Pombagiras</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gira__observacao">
+                        <h4>Observações Importantes</h4>
+                        <ul>
+                            <li>A gira de esquerda geralmente ocorre em horário noturno</li>
+                            <li>É obrigatório o uso de roupas apropriadas (geralmente vermelho e preto)</li>
+                            <li>Respeito absoluto às entidades que se manifestam</li>
+                            <li>Proibido fotografar ou filmar sem autorização</li>
+                            <li>Oferendas específicas são preparadas conforme orientação dos sacerdotes</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <!-- História da Umbanda Section -->
         <section class="section historia" id="historia">
             <div class="container">
                 <h2 class="section__title">História da Umbanda</h2>
@@ -250,7 +577,6 @@
             </div>
         </section>
 
-        <!-- Teologia e Cosmologia Section -->
         <section class="section teologia" id="teologia">
             <div class="container">
                 <h2 class="section__title">Teologia e Cosmologia</h2>
@@ -383,68 +709,6 @@
             </div>
         </section>
 
-        <!-- Fundamentos Section -->
-        <section class="section fundamentos" id="fundamentos">
-            <div class="container">
-                <h2 class="section__title">Fundamentos da Casa</h2>
-                <p class="section__subtitle">Princípios e regras que regem nosso terreiro</p>
-
-                <div class="fundamentos__content">
-                    <div class="fundamento__card fundamento__card--destaque">
-                        <div class="fundamento__number">01</div>
-                        <h3>Autoridade Sacerdotal</h3>
-                        <p>O Sacerdote é a <strong>autoridade máxima</strong> do terreiro, responsável pela condução espiritual e pelos trabalhos da casa. Toda atividade espiritual — seja dentro ou fora do terreiro — realizada por filhos de santo deve ser <strong>previamente comunicada e autorizada</strong>. Esta orientação existe para garantir a proteção espiritual de todos e a harmonia dos trabalhos.</p>
-                    </div>
-
-                    <div class="fundamento__card">
-                        <div class="fundamento__number">02</div>
-                        <h3>Guias Básicas Obrigatórias</h3>
-                        <div class="guias-basicas">
-                            <div class="guia-item">
-                                <div class="guia-cor" style="background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(200,200,200,0.3));"></div>
-                                <div class="guia-info">
-                                    <strong>Guia Cristal Transparente Transversal</strong>
-                                    <span>Guia da Casa de Oxalá</span>
-                                </div>
-                            </div>
-                            <div class="guia-item">
-                                <div class="guia-cor" style="background: linear-gradient(135deg, #f5f5f5, #e0e0e0);"></div>
-                                <div class="guia-info">
-                                    <strong>Guia Branca Leitosa</strong>
-                                    <span>Guia do Anjo da Guarda</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="fundamento__card">
-                        <div class="fundamento__number">03</div>
-                        <h3>Guias de Orixás e Entidades</h3>
-                        <p>Guias de Orixás e de guias espirituais <strong>devem ser permitidas pelo Sacerdote</strong>. Nenhum filho deve confeccionar ou usar guias sem a devida autorização.</p>
-                    </div>
-
-                    <div class="fundamento__card">
-                        <div class="fundamento__number">04</div>
-                        <h3>Sem Sincretismo</h3>
-                        <p>A casa cultua Jesus Cristo e Nossa Senhora com todo respeito, porém <strong>não praticamos sincretismo</strong>. Oxalá é Oxalá e Jesus é Jesus - cada um com sua identidade própria.</p>
-                    </div>
-
-                    <div class="fundamento__card">
-                        <div class="fundamento__number">05</div>
-                        <h3>Respeito à Hierarquia</h3>
-                        <p>A Umbanda possui hierarquia espiritual e terrena. Respeitar os mais velhos de santo, os sacerdotes e as entidades é fundamental.</p>
-                    </div>
-
-                    <div class="fundamento__card">
-                        <div class="fundamento__number">06</div>
-                        <h3>Caridade e Humildade</h3>
-                        <p>A Umbanda é caridade. Todos os atendimentos e trabalhos espirituais são realizados com amor e dedicação, sem distinção de pessoas.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7 Tronos Section -->
         <section class="section tronos" id="tronos">
             <div class="container">
                 <h2 class="section__title">Os 7 Tronos da Umbanda</h2>
@@ -605,7 +869,6 @@
             </div>
         </section>
 
-        <!-- Orixás Section -->
         <section class="section orixas" id="orixas">
             <div class="container">
                 <h2 class="section__title">Os 14 Orixás</h2>
@@ -1174,63 +1437,6 @@
             </div>
         </section>
 
-        <!-- Hierarquia Sacerdotal Section -->
-        <section class="section hierarquia" id="hierarquia">
-            <div class="container">
-                <h2 class="section__title">Hierarquia Sacerdotal</h2>
-                <p class="section__subtitle">A estrutura organizacional do terreiro</p>
-
-                <div class="hierarquia__grid">
-                    <div class="hierarquia__card hierarquia__card--destaque">
-                        <span class="hierarquia__nivel">1</span>
-                        <h3>Babalorixá / Ialorixá</h3>
-                        <span class="hierarquia__titulo">Pai ou Mãe de Santo</span>
-                        <p>Líder máximo do terreiro, responsável pela condução espiritual e administrativa da casa. Possui a autoridade final sobre todos os trabalhos, iniciação de médiuns e decisões do terreiro.</p>
-                    </div>
-
-                    <div class="hierarquia__card">
-                        <span class="hierarquia__nivel">2</span>
-                        <h3>Pai-Pequeno / Mãe-Pequena</h3>
-                        <span class="hierarquia__titulo">Auxiliar direto do Sacerdote</span>
-                        <p>Braços direito e esquerdo do sacerdote. Auxiliam na condução dos trabalhos, orientam os médiuns mais novos e substituem o sacerdote em sua ausência.</p>
-                    </div>
-
-                    <div class="hierarquia__card">
-                        <span class="hierarquia__nivel">3</span>
-                        <h3>Cambono</h3>
-                        <span class="hierarquia__titulo">Auxiliar das Entidades</span>
-                        <p>Responsável por auxiliar as entidades incorporadas durante os trabalhos. Fornece materiais, anota recados, cuida da segurança do médium e garante o bom andamento do atendimento.</p>
-                    </div>
-
-                    <div class="hierarquia__card">
-                        <span class="hierarquia__nivel">4</span>
-                        <h3>Ogã</h3>
-                        <span class="hierarquia__titulo">Tocador e Cantador</span>
-                        <p>Responsável pelos atabaques e pontos cantados. O ogã é fundamental para manter a vibração espiritual durante as giras através da música sagrada. Possui profundo conhecimento dos pontos de cada linha.</p>
-                    </div>
-
-                    <div class="hierarquia__card">
-                        <span class="hierarquia__nivel">5</span>
-                        <h3>Médium</h3>
-                        <span class="hierarquia__titulo">Instrumento das Entidades</span>
-                        <p>Pessoa que possui mediunidade desenvolvida e serve de instrumento para a manifestação das entidades. Deve zelar por sua saúde física, mental e espiritual.</p>
-                    </div>
-
-                    <div class="hierarquia__card">
-                        <span class="hierarquia__nivel">6</span>
-                        <h3>Filho de Santo</h3>
-                        <span class="hierarquia__titulo">Membro da Casa</span>
-                        <p>Todo aquele que frequenta e pertence ao terreiro. Independente de ter ou não mediunidade, participa dos trabalhos, aprende os fundamentos e colabora com a casa.</p>
-                    </div>
-                </div>
-
-                <div class="hierarquia__nota">
-                    <p><strong>Importante:</strong> A hierarquia na Umbanda existe para manter a ordem e o respeito. Todo filho de santo deve respeitar seus mais velhos de santo, seguir as orientações do sacerdote e zelar pelo bom funcionamento da casa.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Linhas de Trabalho Section -->
         <section class="section guias" id="guias">
             <div class="container">
                 <h2 class="section__title">Linhas de Trabalho</h2>
@@ -1346,7 +1552,6 @@
             </div>
         </section>
 
-        <!-- Linha dos Ciganos Section -->
         <section class="section ciganos" id="ciganos">
             <div class="container">
                 <h2 class="section__title">A Linha dos Ciganos</h2>
@@ -1463,7 +1668,61 @@
             </div>
         </section>
 
-        <!-- Rituais e Práticas Section -->
+        <section class="section hierarquia" id="hierarquia">
+            <div class="container">
+                <h2 class="section__title">Hierarquia Sacerdotal</h2>
+                <p class="section__subtitle">A estrutura organizacional do terreiro</p>
+
+                <div class="hierarquia__grid">
+                    <div class="hierarquia__card hierarquia__card--destaque">
+                        <span class="hierarquia__nivel">1</span>
+                        <h3>Babalorixá / Ialorixá</h3>
+                        <span class="hierarquia__titulo">Pai ou Mãe de Santo</span>
+                        <p>Líder máximo do terreiro, responsável pela condução espiritual e administrativa da casa. Possui a autoridade final sobre todos os trabalhos, iniciação de médiuns e decisões do terreiro.</p>
+                    </div>
+
+                    <div class="hierarquia__card">
+                        <span class="hierarquia__nivel">2</span>
+                        <h3>Pai-Pequeno / Mãe-Pequena</h3>
+                        <span class="hierarquia__titulo">Auxiliar direto do Sacerdote</span>
+                        <p>Braços direito e esquerdo do sacerdote. Auxiliam na condução dos trabalhos, orientam os médiuns mais novos e substituem o sacerdote em sua ausência.</p>
+                    </div>
+
+                    <div class="hierarquia__card">
+                        <span class="hierarquia__nivel">3</span>
+                        <h3>Cambono</h3>
+                        <span class="hierarquia__titulo">Auxiliar das Entidades</span>
+                        <p>Responsável por auxiliar as entidades incorporadas durante os trabalhos. Fornece materiais, anota recados, cuida da segurança do médium e garante o bom andamento do atendimento.</p>
+                    </div>
+
+                    <div class="hierarquia__card">
+                        <span class="hierarquia__nivel">4</span>
+                        <h3>Ogã</h3>
+                        <span class="hierarquia__titulo">Tocador e Cantador</span>
+                        <p>Responsável pelos atabaques e pontos cantados. O ogã é fundamental para manter a vibração espiritual durante as giras através da música sagrada. Possui profundo conhecimento dos pontos de cada linha.</p>
+                    </div>
+
+                    <div class="hierarquia__card">
+                        <span class="hierarquia__nivel">5</span>
+                        <h3>Médium</h3>
+                        <span class="hierarquia__titulo">Instrumento das Entidades</span>
+                        <p>Pessoa que possui mediunidade desenvolvida e serve de instrumento para a manifestação das entidades. Deve zelar por sua saúde física, mental e espiritual.</p>
+                    </div>
+
+                    <div class="hierarquia__card">
+                        <span class="hierarquia__nivel">6</span>
+                        <h3>Filho de Santo</h3>
+                        <span class="hierarquia__titulo">Membro da Casa</span>
+                        <p>Todo aquele que frequenta e pertence ao terreiro. Independente de ter ou não mediunidade, participa dos trabalhos, aprende os fundamentos e colabora com a casa.</p>
+                    </div>
+                </div>
+
+                <div class="hierarquia__nota">
+                    <p><strong>Importante:</strong> A hierarquia na Umbanda existe para manter a ordem e o respeito. Todo filho de santo deve respeitar seus mais velhos de santo, seguir as orientações do sacerdote e zelar pelo bom funcionamento da casa.</p>
+                </div>
+            </div>
+        </section>
+
         <section class="section rituais" id="rituais">
             <div class="container">
                 <h2 class="section__title">Rituais e Práticas</h2>
@@ -1541,328 +1800,6 @@
             </div>
         </section>
 
-        <!-- Cronologia das Giras Section -->
-        <section class="section cronologia" id="cronologia">
-            <div class="container">
-                <h2 class="section__title">Cronologia das Giras</h2>
-                <p class="section__subtitle">O passo a passo dos trabalhos espirituais</p>
-
-                <!-- Chegada ao Terreiro -->
-                <div class="cronologia__chegada">
-                    <div class="chegada__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-                            <polyline points="9,22 9,12 15,12 15,22"/>
-                        </svg>
-                    </div>
-                    <div class="chegada__content">
-                        <h3>Ao Chegar no Terreiro</h3>
-                        <p class="chegada__intro">Antes do início de qualquer gira, o filho da casa deve seguir este ritual de preparação:</p>
-                        <div class="chegada__passos">
-                            <div class="chegada__passo">
-                                <span class="passo__numero">1</span>
-                                <div class="passo__content">
-                                    <strong>Vestir a Roupa Ritual</strong>
-                                    <p>Coloque suas roupas brancas apropriadas para o trabalho espiritual, demonstrando respeito e pureza.</p>
-                                </div>
-                            </div>
-                            <div class="chegada__passo">
-                                <span class="passo__numero">2</span>
-                                <div class="passo__content">
-                                    <strong>Colocar as Guias</strong>
-                                    <p>Vista suas guias (colares sagrados) que representam sua ligação com os Orixás e entidades.</p>
-                                </div>
-                            </div>
-                            <div class="chegada__passo">
-                                <span class="passo__numero">3</span>
-                                <div class="passo__content">
-                                    <strong>Bater Cabeça para o Congá</strong>
-                                    <p>Dirija-se ao Congá (altar sagrado) e bata cabeça, saudando os Orixás e pedindo licença para participar dos trabalhos.</p>
-                                </div>
-                            </div>
-                            <div class="chegada__passo">
-                                <span class="passo__numero">4</span>
-                                <div class="passo__content">
-                                    <strong>Acender Vela no Cruzeiro</strong>
-                                    <p>Acenda sua vela do Anjo da Guarda no cruzeiro das almas, firmando sua proteção espiritual para o trabalho.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Seletor de Giras -->
-                <div class="cronologia__seletor">
-                    <button class="gira__btn active" data-gira="direita">
-                        <span class="gira__btn-icon">☀️</span>
-                        Gira de Direita
-                    </button>
-                    <button class="gira__btn" data-gira="esquerda">
-                        <span class="gira__btn-icon">🌙</span>
-                        Gira de Esquerda
-                    </button>
-                </div>
-
-                <!-- Gira de Direita -->
-                <div class="gira__container gira--direita active" id="gira-direita">
-                    <div class="gira__header gira__header--direita">
-                        <h3>Gira de Direita</h3>
-                        <p>Trabalhos com Caboclos, Pretos Velhos, Crianças, Baianos e demais entidades de luz</p>
-                    </div>
-
-                    <div class="gira__timeline">
-                        <div class="timeline__item" data-step="1">
-                            <div class="timeline__marker">
-                                <span class="marker__numero">1</span>
-                            </div>
-                            <div class="timeline__content">
-                                <h4>Introdução</h4>
-                                <p>Momento de concentração e silêncio. Os médiuns se posicionam na assistência ou na corrente, conforme orientação dos sacerdotes. É o momento de aquietar a mente e se conectar espiritualmente.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item" data-step="2">
-                            <div class="timeline__marker">
-                                <span class="marker__numero">2</span>
-                            </div>
-                            <div class="timeline__content">
-                                <h4>Defumação</h4>
-                                <p>O ambiente é purificado com ervas sagradas. A fumaça remove energias negativas e prepara o espaço para a manifestação espiritual. Todos os presentes são defumados, limpando suas auras.</p>
-                                <div class="timeline__detalhe">
-                                    <span class="detalhe__icon">🌿</span>
-                                    <span>Ervas comuns: arruda, guiné, alecrim, alfazema</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item" data-step="3">
-                            <div class="timeline__marker">
-                                <span class="marker__numero">3</span>
-                            </div>
-                            <div class="timeline__content">
-                                <h4>Bater Cabeça para os Sacerdotes</h4>
-                                <p>Os médiuns da corrente batem cabeça para o Babalorixá e a Yalorixá, pedindo a bênção e demonstrando respeito à hierarquia sacerdotal. Este gesto reafirma o compromisso com a casa.</p>
-                                <div class="timeline__detalhe">
-                                    <span class="detalhe__icon">🙏</span>
-                                    <span>Gesto de humildade e reverência aos guias da casa</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item" data-step="4">
-                            <div class="timeline__marker">
-                                <span class="marker__numero">4</span>
-                            </div>
-                            <div class="timeline__content">
-                                <h4>Saúda a Esquerda</h4>
-                                <p>Saudação aos Exus e Pombagiras guardiões da casa, pedindo proteção e segurança para os trabalhos. Mesmo na gira de direita, a esquerda é saudada pois são os guardiões que protegem o terreiro.</p>
-                                <div class="timeline__detalhe">
-                                    <span class="detalhe__icon">🛡️</span>
-                                    <span>Laroye Exu! Salve o Povo da Rua!</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item" data-step="5">
-                            <div class="timeline__marker">
-                                <span class="marker__numero">5</span>
-                            </div>
-                            <div class="timeline__content">
-                                <h4>Hino da Umbanda</h4>
-                                <p>Canta-se o Hino da Umbanda, reafirmando a fé na religião e na força dos Orixás. É um momento de união e elevação espiritual de todos os presentes.</p>
-                                <div class="timeline__detalhe timeline__detalhe--destaque">
-                                    <span class="detalhe__icon">🎵</span>
-                                    <span>"Refletiu a luz divina, com todo seu esplendor..."</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item" data-step="6">
-                            <div class="timeline__marker">
-                                <span class="marker__numero">6</span>
-                            </div>
-                            <div class="timeline__content">
-                                <h4>Abertura da Gira</h4>
-                                <p>Os sacerdotes realizam a abertura oficial dos trabalhos, firmando os pontos de força e invocando a proteção dos Orixás para que a gira transcorra em paz e harmonia.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item" data-step="7">
-                            <div class="timeline__marker">
-                                <span class="marker__numero">7</span>
-                            </div>
-                            <div class="timeline__content">
-                                <h4>Oração do Pai Nosso</h4>
-                                <p>Reza-se o Pai Nosso, oração universal que conecta todos os presentes à energia divina do Criador, Olorum. É um momento de profunda conexão espiritual.</p>
-                                <div class="timeline__detalhe">
-                                    <span class="detalhe__icon">✝️</span>
-                                    <span>Oração de conexão com o Pai Maior</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item" data-step="8">
-                            <div class="timeline__marker">
-                                <span class="marker__numero">8</span>
-                            </div>
-                            <div class="timeline__content">
-                                <h4>Oração da Ave Maria</h4>
-                                <p>Reza-se a Ave Maria, honrando a energia feminina divina e as Yabás (Orixás femininas), especialmente Oxum e Iemanjá, mães protetoras de todos os filhos.</p>
-                                <div class="timeline__detalhe">
-                                    <span class="detalhe__icon">💙</span>
-                                    <span>Homenagem às energias femininas sagradas</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item" data-step="9">
-                            <div class="timeline__marker">
-                                <span class="marker__numero">9</span>
-                            </div>
-                            <div class="timeline__content">
-                                <h4>Saúda e Canta para Oxalá</h4>
-                                <p>Oxalá, o Pai de todos os Orixás, é saudado com pontos cantados. Sua energia de paz, amor e harmonia envolve todo o terreiro, abençoando os trabalhos.</p>
-                                <div class="timeline__detalhe timeline__detalhe--orixa" style="--orixa-cor: #FFFFFF; --orixa-texto: #1a1a2e;">
-                                    <span class="detalhe__icon">⚪</span>
-                                    <span>Epa Babá! Oxalá é o Pai!</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item" data-step="10">
-                            <div class="timeline__marker">
-                                <span class="marker__numero">10</span>
-                            </div>
-                            <div class="timeline__content">
-                                <h4>Saúda e Canta para Omolu</h4>
-                                <p>Omolu, o Senhor da Terra e das Almas, é saudado. Sua presença traz cura, transformação e a bênção ancestral dos que já partiram. Ele é o médico espiritual.</p>
-                                <div class="timeline__detalhe timeline__detalhe--orixa" style="--orixa-cor: #1C1C1C; --orixa-texto: #FFFFFF;">
-                                    <span class="detalhe__icon">⚫</span>
-                                    <span>Atoto Omolu! Atoto!</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item" data-step="11">
-                            <div class="timeline__marker">
-                                <span class="marker__numero">11</span>
-                            </div>
-                            <div class="timeline__content">
-                                <h4>Saúda e Canta para o Orixá Regente</h4>
-                                <p>O Orixá que rege a gira do dia é saudado com seus pontos específicos. Cada dia da semana possui um Orixá regente que traz sua vibração particular aos trabalhos.</p>
-                                <div class="timeline__detalhe">
-                                    <span class="detalhe__icon">👑</span>
-                                    <span>Varia conforme o dia e a determinação da casa</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item timeline__item--final" data-step="12">
-                            <div class="timeline__marker timeline__marker--final">
-                                <span class="marker__numero">12</span>
-                            </div>
-                            <div class="timeline__content">
-                                <h4>Chamada dos Guias</h4>
-                                <p>Momento culminante da gira! Os pontos de chamada são cantados para que as entidades se manifestem nos médiuns. Caboclos, Pretos Velhos, Crianças, Baianos e outras entidades de luz descem para trabalhar em prol dos consulentes.</p>
-                                <div class="timeline__detalhe timeline__detalhe--destaque">
-                                    <span class="detalhe__icon">✨</span>
-                                    <span>Início dos trabalhos de caridade e atendimento</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Gira de Esquerda -->
-                <div class="gira__container gira--esquerda" id="gira-esquerda">
-                    <div class="gira__header gira__header--esquerda">
-                        <h3>Gira de Esquerda</h3>
-                        <p>Trabalhos com Exus e Pombagiras - Os guardiões e protetores</p>
-                    </div>
-
-                    <div class="gira__intro-esquerda">
-                        <p>A Gira de Esquerda é dedicada aos Exus e Pombagiras, entidades que trabalham na linha de proteção, defesa e abertura de caminhos. São espíritos de luz que atuam nas demandas mais pesadas e na quebra de magias negativas.</p>
-                    </div>
-
-                    <div class="gira__timeline gira__timeline--esquerda">
-                        <div class="timeline__item" data-step="1">
-                            <div class="timeline__marker timeline__marker--esquerda">
-                                <span class="marker__numero">1</span>
-                            </div>
-                            <div class="timeline__content">
-                                <h4>Introdução</h4>
-                                <p>Momento de concentração e preparação espiritual. O ambiente é mais reservado, com iluminação reduzida (geralmente apenas velas). Os médiuns se preparam para receber as entidades da esquerda.</p>
-                                <div class="timeline__detalhe timeline__detalhe--esquerda">
-                                    <span class="detalhe__icon">🕯️</span>
-                                    <span>Ambiente preparado com velas vermelhas e pretas</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item" data-step="2">
-                            <div class="timeline__marker timeline__marker--esquerda">
-                                <span class="marker__numero">2</span>
-                            </div>
-                            <div class="timeline__content">
-                                <h4>Abertura da Gira</h4>
-                                <p>Os sacerdotes realizam a abertura dos trabalhos, firmando os pontos de Exu e invocando a proteção do Exu Guardião da casa. É pedida licença aos guardiões para que os trabalhos se realizem em ordem e segurança.</p>
-                                <div class="timeline__detalhe timeline__detalhe--esquerda">
-                                    <span class="detalhe__icon">🔥</span>
-                                    <span>Firma-se o ponto do Exu Chefe da Casa</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item" data-step="3">
-                            <div class="timeline__marker timeline__marker--esquerda">
-                                <span class="marker__numero">3</span>
-                            </div>
-                            <div class="timeline__content">
-                                <h4>Saúda Ogum</h4>
-                                <p>Ogum é saudado como o grande guerreiro e protetor. Ele é invocado para abrir os caminhos e garantir a segurança espiritual de todos durante a gira. Sua força é essencial para os trabalhos de esquerda.</p>
-                                <div class="timeline__detalhe timeline__detalhe--esquerda">
-                                    <span class="detalhe__icon">⚔️</span>
-                                    <span>Ogunhê! Patakori Ogum!</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="timeline__item timeline__item--final" data-step="4">
-                            <div class="timeline__marker timeline__marker--esquerda timeline__marker--final">
-                                <span class="marker__numero">4</span>
-                            </div>
-                            <div class="timeline__content">
-                                <h4>O Sino da Igrejinha</h4>
-                                <p>Canta-se o ponto "O Sino da Igrejinha", marcando o início oficial da chamada dos guias de esquerda. Este é um dos pontos mais tradicionais e emocionantes da Umbanda.</p>
-                                <div class="timeline__letra">
-                                    <p><em>"O sino da igrejinha faz belém-blem-blom...</em></p>
-                                    <p><em>Deu meia-noite, o galo já cantou...</em></p>
-                                    <p><em>Seu Exu que é dono da gira, ô corre gira que Ogum mandou!"</em></p>
-                                </div>
-                                <div class="timeline__detalhe timeline__detalhe--destaque timeline__detalhe--esquerda">
-                                    <span class="detalhe__icon">🔔</span>
-                                    <span>Início da manifestação dos Exus e Pombagiras</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="gira__observacao">
-                        <h4>Observações Importantes</h4>
-                        <ul>
-                            <li>A gira de esquerda geralmente ocorre em horário noturno</li>
-                            <li>É obrigatório o uso de roupas apropriadas (geralmente vermelho e preto)</li>
-                            <li>Respeito absoluto às entidades que se manifestam</li>
-                            <li>Proibido fotografar ou filmar sem autorização</li>
-                            <li>Oferendas específicas são preparadas conforme orientação dos sacerdotes</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Elementos Rituais Section -->
         <section class="section elementos" id="elementos">
             <div class="container">
                 <h2 class="section__title">Elementos Rituais</h2>
@@ -1936,7 +1873,6 @@
             </div>
         </section>
 
-        <!-- Pontos Riscados Section -->
         <section class="section pontos-riscados" id="pontos-riscados">
             <div class="container">
                 <h2 class="section__title">Pontos Riscados</h2>
@@ -2005,7 +1941,6 @@
             </div>
         </section>
 
-        <!-- Ética na Umbanda Section -->
         <section class="section etica" id="etica">
             <div class="container">
                 <h2 class="section__title">Ética na Umbanda</h2>
@@ -2065,111 +2000,6 @@
             </div>
         </section>
 
-        <!-- Funcionamento Section -->
-        <section class="section funcionamento" id="funcionamento">
-            <div class="container">
-                <h2 class="section__title">Funcionamento da Casa</h2>
-                <p class="section__subtitle">Nossos dias de trabalho e atendimento</p>
-
-                <div class="funcionamento__grid">
-                    <div class="dia__card dia__card--destaque">
-                        <div class="dia__header">
-                            <span class="dia__nome">Quarta-feira</span>
-                            <span class="dia__titulo">Quarta das Cartas</span>
-                        </div>
-                        <div class="dia__body">
-                            <p class="dia__descricao">Atendimento gratuito ao público com tiragem de cartas. Venha buscar orientação espiritual através do oráculo.</p>
-                            <div class="dia__horarios">
-                                <div class="horario__item">
-                                    <span class="horario__label">Distribuição de Fichas</span>
-                                    <strong class="horario__valor">a partir das 19:30</strong>
-                                </div>
-                                <div class="horario__item">
-                                    <span class="horario__label">Início da Tiragem</span>
-                                    <strong class="horario__valor">20:30</strong>
-                                </div>
-                            </div>
-                            <div class="dia__info">
-                                <div class="info__item">
-                                    <span class="info__label">Formato</span>
-                                    <span class="info__valor">3 perguntas por consulente</span>
-                                </div>
-                                <div class="info__item">
-                                    <span class="info__label">Custo</span>
-                                    <span class="info__valor destacado">Gratuito</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="dia__card">
-                        <div class="dia__header">
-                            <span class="dia__nome">Sexta-feira</span>
-                            <span class="dia__titulo">Dia de Gira</span>
-                        </div>
-                        <div class="dia__body">
-                            <p class="dia__descricao">Nosso dia sagrado de trabalhos espirituais, onde as entidades se manifestam para atender os filhos e consulentes.</p>
-                            <div class="dia__horarios">
-                                <div class="horario__item">
-                                    <span class="horario__label">Distribuição de Fichas</span>
-                                    <strong class="horario__valor">a partir das 19:30</strong>
-                                </div>
-                                <div class="horario__item">
-                                    <span class="horario__label">Início da Gira</span>
-                                    <strong class="horario__valor">20:30</strong>
-                                </div>
-                            </div>
-                            <div class="giras__calendario">
-                                <div class="gira__item">
-                                    <span class="gira__periodo">Início do Mês</span>
-                                    <strong class="gira__tipo">Gira de Esquerda</strong>
-                                </div>
-                                <div class="gira__item">
-                                    <span class="gira__periodo">Final do Mês</span>
-                                    <strong class="gira__tipo">Gira de Preto Velho</strong>
-                                </div>
-                                <div class="gira__item">
-                                    <span class="gira__periodo">Demais Sextas</span>
-                                    <strong class="gira__tipo">Giras Variadas</strong>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="funcionamento__aviso">
-                    <p><strong>Importante:</strong> Todos os trabalhos espirituais são realizados sob orientação do Sacerdote. Para trabalhos específicos, consulte previamente a casa.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sacerdotes Section -->
-        <section class="section sacerdotes" id="sacerdotes">
-            <div class="container">
-                <h2 class="section__title">Nossos Sacerdotes</h2>
-                <p class="section__subtitle">Os guias terrenos da nossa casa</p>
-
-                <div class="sacerdotes__content">
-                    <div class="sacerdotes__foto">
-                        <img src="img/WhatsApp Image 2025-12-27 at 21.50.21.jpeg" alt="Sacerdote Devanir e Sacerdotisa Mariana">
-                    </div>
-                    <div class="sacerdotes__info">
-                        <div class="sacerdote__item">
-                            <h3 class="sacerdote__nome">Devanir Annovazzi Junior</h3>
-                            <span class="sacerdote__titulo">Sacerdote</span>
-                            <p class="sacerdote__descricao">Responsável pela condução espiritual da casa, pelos trabalhos e pela orientação dos filhos de santo.</p>
-                        </div>
-                        <div class="sacerdote__item">
-                            <h3 class="sacerdote__nome">Mariana Rodrigues Annovazzi</h3>
-                            <span class="sacerdote__titulo">Sacerdotisa</span>
-                            <p class="sacerdote__descricao">Corresponsável pela condução espiritual da casa, auxiliando nos trabalhos e na orientação dos filhos de santo.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Glossário Section -->
         <section class="section glossario" id="glossario">
             <div class="container">
                 <h2 class="section__title">Glossário Umbandista</h2>
@@ -2252,7 +2082,185 @@
             </div>
         </section>
 
-        <!-- Localização Section -->
+        <section class="section sobre" id="sobre">
+            <div class="container">
+                <h2 class="section__title">Sobre o Templo</h2>
+                <p class="section__subtitle">Conheça nossa casa e missão</p>
+
+                <div class="sobre__grid">
+                    <div class="sobre__card">
+                        <div class="sobre__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Orixá Regente</h3>
+                        <p><strong>Oxalá</strong> é o Orixá regente da nossa casa, trazendo a energia da fé, da paz e da criação divina.</p>
+                    </div>
+
+                    <div class="sobre__card">
+                        <div class="sobre__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h3>Força Atuante</h3>
+                        <p><strong>Omolu</strong> também atua fortemente nos trabalhos da casa, trazendo a energia da cura e transformação.</p>
+                    </div>
+
+                    <div class="sobre__card">
+                        <div class="sobre__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3>Guia Chefe</h3>
+                        <p><strong>Exu Lucifer</strong> é o guia chefe da casa, responsável pela proteção e abertura dos caminhos.</p>
+                    </div>
+
+                    <div class="sobre__card">
+                        <div class="sobre__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                            </svg>
+                        </div>
+                        <h3>Nossa Teologia</h3>
+                        <p>Cultuamos os <strong>14 Orixás dos 7 Tronos</strong>. <strong>Sem sincretismo</strong>: Oxalá é Oxalá, Jesus é Jesus.</p>
+                    </div>
+                </div>
+
+                <div class="sobre__estrutura">
+                    <h3>Estrutura Espiritual da Casa</h3>
+                    <div class="sobre__estrutura-grid">
+                        <div class="estrutura__item">
+                            <span class="estrutura__label">Congá</span>
+                            <p>Nosso Congá é sagrado e possui a esquerda presente, representando a dualidade e o equilíbrio das forças.</p>
+                        </div>
+                        <div class="estrutura__item">
+                            <span class="estrutura__label">Tronqueira</span>
+                            <p>Possuímos tronqueira com a esquerda, local sagrado de firmeza dos Exus e Pombagiras guardiões.</p>
+                        </div>
+                        <div class="estrutura__item">
+                            <span class="estrutura__label">Cruzeiro</span>
+                            <p>Símbolo sagrado de proteção e fé, representa a ligação entre o plano terreno e o espiritual, firmando a força da casa.</p>
+                        </div>
+                        <div class="estrutura__item">
+                            <span class="estrutura__label">Atabaque</span>
+                            <p>Instrumento sagrado que conduz os pontos cantados e mantém a vibração espiritual durante as giras, conectando-nos aos Orixás.</p>
+                        </div>
+                        <div class="estrutura__item">
+                            <span class="estrutura__label">Plantas Sagradas</span>
+                            <p>Comigo-ninguém-pode, Espada de São Jorge, Espada de Santa Bárbara e Rosa Branca protegem e purificam o ambiente espiritual.</p>
+                        </div>
+                        <div class="estrutura__item">
+                            <span class="estrutura__label">Ferradura e Prego</span>
+                            <p>Elementos de proteção ligados a Ogum, afastam energias negativas e firmam a segurança espiritual do terreiro.</p>
+                        </div>
+                        <div class="estrutura__item">
+                            <span class="estrutura__label">Caldeirão</span>
+                            <p>Instrumento sagrado utilizado na realização de magias e trabalhos espirituais, concentrando e direcionando as energias rituais.</p>
+                        </div>
+                        <div class="estrutura__item">
+                            <span class="estrutura__label">Imagens Sagradas</span>
+                            <p>Representações dos Orixás e entidades que compõem o Congá, canalizando as energias divinas durante os trabalhos.</p>
+                        </div>
+                        <div class="estrutura__item">
+                            <span class="estrutura__label">Velas</span>
+                            <p>Elemento essencial nos rituais, representa a luz divina e a comunicação com o mundo espiritual. Cada cor possui significado específico ligado aos Orixás.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section fundamentos" id="fundamentos">
+            <div class="container">
+                <h2 class="section__title">Fundamentos da Casa</h2>
+                <p class="section__subtitle">Princípios e regras que regem nosso terreiro</p>
+
+                <div class="fundamentos__content">
+                    <div class="fundamento__card fundamento__card--destaque">
+                        <div class="fundamento__number">01</div>
+                        <h3>Autoridade Sacerdotal</h3>
+                        <p>O Sacerdote é a <strong>autoridade máxima</strong> do terreiro, responsável pela condução espiritual e pelos trabalhos da casa. Toda atividade espiritual — seja dentro ou fora do terreiro — realizada por filhos de santo deve ser <strong>previamente comunicada e autorizada</strong>. Esta orientação existe para garantir a proteção espiritual de todos e a harmonia dos trabalhos.</p>
+                    </div>
+
+                    <div class="fundamento__card">
+                        <div class="fundamento__number">02</div>
+                        <h3>Guias Básicas Obrigatórias</h3>
+                        <div class="guias-basicas">
+                            <div class="guia-item">
+                                <div class="guia-cor" style="background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(200,200,200,0.3));"></div>
+                                <div class="guia-info">
+                                    <strong>Guia Cristal Transparente Transversal</strong>
+                                    <span>Guia da Casa de Oxalá</span>
+                                </div>
+                            </div>
+                            <div class="guia-item">
+                                <div class="guia-cor" style="background: linear-gradient(135deg, #f5f5f5, #e0e0e0);"></div>
+                                <div class="guia-info">
+                                    <strong>Guia Branca Leitosa</strong>
+                                    <span>Guia do Anjo da Guarda</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fundamento__card">
+                        <div class="fundamento__number">03</div>
+                        <h3>Guias de Orixás e Entidades</h3>
+                        <p>Guias de Orixás e de guias espirituais <strong>devem ser permitidas pelo Sacerdote</strong>. Nenhum filho deve confeccionar ou usar guias sem a devida autorização.</p>
+                    </div>
+
+                    <div class="fundamento__card">
+                        <div class="fundamento__number">04</div>
+                        <h3>Sem Sincretismo</h3>
+                        <p>A casa cultua Jesus Cristo e Nossa Senhora com todo respeito, porém <strong>não praticamos sincretismo</strong>. Oxalá é Oxalá e Jesus é Jesus - cada um com sua identidade própria.</p>
+                    </div>
+
+                    <div class="fundamento__card">
+                        <div class="fundamento__number">05</div>
+                        <h3>Respeito à Hierarquia</h3>
+                        <p>A Umbanda possui hierarquia espiritual e terrena. Respeitar os mais velhos de santo, os sacerdotes e as entidades é fundamental.</p>
+                    </div>
+
+                    <div class="fundamento__card">
+                        <div class="fundamento__number">06</div>
+                        <h3>Caridade e Humildade</h3>
+                        <p>A Umbanda é caridade. Todos os atendimentos e trabalhos espirituais são realizados com amor e dedicação, sem distinção de pessoas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section sacerdotes" id="sacerdotes">
+            <div class="container">
+                <h2 class="section__title">Nossos Sacerdotes</h2>
+                <p class="section__subtitle">Os guias terrenos da nossa casa</p>
+
+                <div class="sacerdotes__content">
+                    <div class="sacerdotes__foto">
+                        <img src="img/WhatsApp Image 2025-12-27 at 21.50.21.jpeg" alt="Sacerdote Devanir e Sacerdotisa Mariana">
+                    </div>
+                    <div class="sacerdotes__info">
+                        <div class="sacerdote__item">
+                            <h3 class="sacerdote__nome">Devanir Annovazzi Junior</h3>
+                            <span class="sacerdote__titulo">Sacerdote</span>
+                            <p class="sacerdote__descricao">Responsável pela condução espiritual da casa, pelos trabalhos e pela orientação dos filhos de santo.</p>
+                        </div>
+                        <div class="sacerdote__item">
+                            <h3 class="sacerdote__nome">Mariana Rodrigues Annovazzi</h3>
+                            <span class="sacerdote__titulo">Sacerdotisa</span>
+                            <p class="sacerdote__descricao">Corresponsável pela condução espiritual da casa, auxiliando nos trabalhos e na orientação dos filhos de santo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </section>
+
         <section class="section localizacao" id="localizacao">
             <div class="container">
                 <h2 class="section__title">Localização</h2>
@@ -2288,7 +2296,6 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
         <section class="section cta">
             <div class="container">
                 <div class="cta__content">
@@ -2308,20 +2315,11 @@
         <div class="container">
             <div class="footer__content">
                 <div class="footer__brand">
-                    <img src="img/logo.jpeg" alt="Logo" class="footer__logo">
+                    <a href="#home" class="footer__logo-link">
+                        <img src="img/logo.jpeg" alt="Logo" class="footer__logo">
+                    </a>
                     <h3>Templo de Umbanda Guardião da Luz</h3>
                     <p class="footer__lema">Sob a luz de Oxalá, caminhamos na fé.</p>
-                </div>
-                <div class="footer__links">
-                    <h4>Navegação</h4>
-                    <ul>
-                        <li><a href="#home">Início</a></li>
-                        <li><a href="#historia">História</a></li>
-                        <li><a href="#teologia">Teologia</a></li>
-                        <li><a href="#orixas">Orixás</a></li>
-                        <li><a href="#rituais">Rituais</a></li>
-                        <li><a href="#glossario">Glossário</a></li>
-                    </ul>
                 </div>
                 <div class="footer__info">
                     <h4>Endereço</h4>

@@ -18,70 +18,101 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * Navigation Module
+ * Sidebar Navigation Module
  */
 function initNavigation() {
-    const header = document.getElementById('header');
-    const navMenu = document.getElementById('nav-menu');
-    const navToggle = document.getElementById('nav-toggle');
-    const navClose = document.getElementById('nav-close');
-    const navLinks = document.querySelectorAll('.nav__link');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
+    const sidebarLinks = document.querySelectorAll('.sidebar__link');
 
-    // Toggle mobile menu
-    if (navToggle) {
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.add('active');
-            document.body.style.overflow = 'hidden';
+    // Toggle sidebar
+    if (sidebarToggle) {
+        sidebarToggle.addEventListener('click', () => {
+            if (window.innerWidth >= 1100) {
+                // Desktop: toggle expand/collapse
+                toggleSidebarDesktop();
+            } else {
+                // Mobile: toggle open/close
+                const isActive = sidebar.classList.contains('active');
+                if (isActive) {
+                    closeSidebarMobile();
+                } else {
+                    openSidebarMobile();
+                }
+            }
         });
     }
 
-    if (navClose) {
-        navClose.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        });
+    // Close sidebar when clicking overlay (mobile only)
+    if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', closeSidebarMobile);
     }
 
-    // Close menu when clicking on a link
-    navLinks.forEach(link => {
+    // Close sidebar when clicking on a link (mobile only)
+    sidebarLinks.forEach(link => {
         link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            document.body.style.overflow = '';
+            // Only close on mobile
+            if (window.innerWidth < 1100) {
+                closeSidebarMobile();
+            }
 
             // Update active state
-            navLinks.forEach(l => l.classList.remove('active'));
+            sidebarLinks.forEach(l => l.classList.remove('active'));
             link.classList.add('active');
         });
     });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (navMenu.classList.contains('active') &&
-            !navMenu.contains(e.target) &&
-            !navToggle.contains(e.target)) {
-            navMenu.classList.remove('active');
-            document.body.style.overflow = '';
+    // Close sidebar with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            if (window.innerWidth >= 1100) {
+                collapseSidebarDesktop();
+            } else if (sidebar.classList.contains('active')) {
+                closeSidebarMobile();
+            }
         }
     });
 
-    // Header scroll effect
-    let lastScroll = 0;
+    // Update active link on scroll
+    window.addEventListener('scroll', updateActiveNavLink);
 
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-
-        // Add/remove scrolled class
-        if (currentScroll > 50) {
-            header.classList.add('scrolled');
+    // Desktop: Toggle expand/collapse
+    function toggleSidebarDesktop() {
+        const isExpanded = sidebar.classList.contains('expanded');
+        if (isExpanded) {
+            collapseSidebarDesktop();
         } else {
-            header.classList.remove('scrolled');
+            expandSidebarDesktop();
         }
+    }
 
-        // Update active nav link based on scroll position
-        updateActiveNavLink();
+    function expandSidebarDesktop() {
+        sidebar.classList.add('expanded');
+        sidebarToggle.classList.add('expanded');
+        document.body.classList.add('sidebar-expanded');
+    }
 
-        lastScroll = currentScroll;
-    });
+    function collapseSidebarDesktop() {
+        sidebar.classList.remove('expanded');
+        sidebarToggle.classList.remove('expanded');
+        document.body.classList.remove('sidebar-expanded');
+    }
+
+    // Mobile: Open/close sidebar
+    function openSidebarMobile() {
+        sidebar.classList.add('active');
+        sidebarToggle.classList.add('active');
+        sidebarOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeSidebarMobile() {
+        sidebar.classList.remove('active');
+        sidebarToggle.classList.remove('active');
+        sidebarOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
 }
 
 /**
@@ -89,8 +120,8 @@ function initNavigation() {
  */
 function updateActiveNavLink() {
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav__link');
-    const scrollPosition = window.pageYOffset + 100;
+    const sidebarLinks = document.querySelectorAll('.sidebar__link');
+    const scrollPosition = window.pageYOffset + 150;
 
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
@@ -98,7 +129,7 @@ function updateActiveNavLink() {
         const sectionId = section.getAttribute('id');
 
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            navLinks.forEach(link => {
+            sidebarLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${sectionId}`) {
                     link.classList.add('active');
