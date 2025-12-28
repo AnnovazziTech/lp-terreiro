@@ -3851,6 +3851,610 @@ strong {
     color: var(--accent-gold);
 }
 
+/* ===================================
+   Mobile Enhancements
+   =================================== */
+
+/* Mobile Variables */
+@media (max-width: 768px) {
+    :root {
+        --space-lg: 1.5rem;
+        --space-xl: 2.5rem;
+        --space-2xl: 3.5rem;
+        --space-3xl: 5rem;
+    }
+}
+
+/* Sidebar Mobile Improvements */
+@media (max-width: 1099px) {
+    .sidebar {
+        width: 85%;
+        max-width: 320px;
+    }
+
+    .sidebar__header {
+        padding: var(--space-lg);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .sidebar__logo-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .sidebar__nav {
+        padding: var(--space-sm) 0;
+    }
+
+    .sidebar__link {
+        padding: var(--space-md) var(--space-lg);
+        font-size: 1rem;
+        min-height: 48px;
+    }
+
+    .sidebar__icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .sidebar__icon svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .sidebar__toggle {
+        width: 48px;
+        height: 48px;
+        top: var(--space-sm);
+        left: var(--space-sm);
+    }
+
+    .sidebar__toggle span {
+        width: 24px;
+        height: 3px;
+    }
+}
+
+/* Hero Mobile Enhancements */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 80px;
+    }
+
+    .hero__content {
+        padding: var(--space-lg);
+        max-width: 100%;
+    }
+
+    .hero__logo {
+        width: 110px;
+        height: 110px;
+        margin-bottom: var(--space-md);
+        box-shadow: 0 0 30px rgba(201, 162, 39, 0.25);
+    }
+
+    .hero__title {
+        font-size: 1.6rem;
+        letter-spacing: 0.02em;
+    }
+
+    .hero__title span {
+        font-size: 1.5rem;
+        margin-top: 0.25rem;
+    }
+
+    .hero__subtitle {
+        font-size: 0.9rem;
+        margin-bottom: var(--space-xs);
+    }
+
+    .hero__description {
+        font-size: 0.92rem;
+        line-height: 1.65;
+        margin-bottom: var(--space-md);
+        opacity: 0.9;
+    }
+
+    .hero__buttons {
+        gap: var(--space-sm);
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .hero__buttons .btn {
+        width: 100%;
+        padding: 0.9rem var(--space-md);
+        font-size: 0.95rem;
+    }
+}
+
+/* Section Titles Mobile */
+@media (max-width: 768px) {
+    .section__title {
+        font-size: 1.5rem;
+        margin-bottom: var(--space-xs);
+        line-height: 1.25;
+    }
+
+    .section__subtitle {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: var(--space-lg);
+    }
+}
+
+/* Cards Mobile Improvements */
+@media (max-width: 768px) {
+    .teologia__card,
+    .fundamento__card,
+    .ritual__card,
+    .etica__card {
+        padding: var(--space-lg);
+    }
+
+    .teologia__card--destaque {
+        grid-column: 1;
+    }
+
+    .teologia__card h3,
+    .fundamento__card h3 {
+        font-size: 1.1rem;
+        margin-bottom: var(--space-sm);
+    }
+
+    .teologia__card p,
+    .fundamento__card p {
+        font-size: 0.92rem;
+        line-height: 1.6;
+    }
+}
+
+/* Orixás Mobile */
+@media (max-width: 768px) {
+    .orixas__filter {
+        flex-wrap: wrap;
+        gap: var(--space-xs);
+        padding: var(--space-sm);
+    }
+
+    .filter__btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+        flex: 1 1 auto;
+        min-width: calc(50% - var(--space-xs));
+        text-align: center;
+    }
+
+    .orixas__grid {
+        gap: var(--space-md);
+    }
+
+    .orixa__card {
+        padding: var(--space-md);
+    }
+
+    .orixa__header h3 {
+        font-size: 1.15rem;
+    }
+
+    .orixa__info-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+    }
+
+    .orixa__info {
+        padding: var(--space-sm);
+    }
+
+    .orixa__saudacao {
+        font-size: 0.95rem;
+        padding: var(--space-sm);
+    }
+}
+
+/* Funcionamento Mobile */
+@media (max-width: 768px) {
+    .dia__card {
+        padding: var(--space-md);
+    }
+
+    .dia__header {
+        padding: var(--space-md);
+        margin: calc(-1 * var(--space-md));
+        margin-bottom: var(--space-md);
+    }
+
+    .dia__nome {
+        font-size: 0.85rem;
+    }
+
+    .dia__titulo {
+        font-size: 1.1rem;
+    }
+
+    .dia__descricao {
+        font-size: 0.9rem;
+        line-height: 1.55;
+    }
+
+    .horario__item {
+        padding: var(--space-sm);
+    }
+
+    .giras__calendario {
+        gap: var(--space-xs);
+    }
+
+    .gira__item {
+        padding: var(--space-sm);
+    }
+
+    .funcionamento__aviso {
+        padding: var(--space-md);
+        font-size: 0.9rem;
+    }
+}
+
+/* Cronologia Mobile */
+@media (max-width: 768px) {
+    .cronologia__chegada {
+        padding: var(--space-md);
+    }
+
+    .chegada__icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .chegada__passo {
+        gap: var(--space-sm);
+    }
+
+    .passo__numero {
+        width: 28px;
+        height: 28px;
+        font-size: 0.85rem;
+        flex-shrink: 0;
+    }
+
+    .passo__content strong {
+        font-size: 0.95rem;
+    }
+
+    .passo__content p {
+        font-size: 0.88rem;
+        line-height: 1.5;
+    }
+
+    .cronologia__seletor {
+        gap: var(--space-sm);
+    }
+
+    .gira__btn {
+        padding: var(--space-sm) var(--space-md);
+        font-size: 0.95rem;
+    }
+
+    .gira__header {
+        padding: var(--space-md);
+    }
+
+    .gira__header h3 {
+        font-size: 1.2rem;
+    }
+
+    .gira__header p {
+        font-size: 0.88rem;
+    }
+
+    .timeline__content {
+        padding: var(--space-md);
+    }
+
+    .timeline__content h4 {
+        font-size: 1rem;
+    }
+
+    .timeline__content p {
+        font-size: 0.88rem;
+        line-height: 1.55;
+    }
+
+    .timeline__detalhe {
+        font-size: 0.82rem;
+        padding: var(--space-sm);
+    }
+}
+
+/* Linhas/Guias Mobile */
+@media (max-width: 768px) {
+    .guias__grid,
+    .ciganos__grid {
+        gap: var(--space-md);
+    }
+
+    .guia__card,
+    .cigano__card {
+        padding: var(--space-md);
+    }
+
+    .guia__card h3,
+    .cigano__card h3 {
+        font-size: 1.1rem;
+    }
+
+    .guia__card p,
+    .cigano__card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Glossário Mobile */
+@media (max-width: 768px) {
+    .glossario__grid {
+        gap: var(--space-sm);
+    }
+
+    .glossario__item {
+        padding: var(--space-md);
+    }
+
+    .glossario__termo {
+        font-size: 0.95rem;
+    }
+
+    .glossario__definicao {
+        font-size: 0.88rem;
+    }
+}
+
+/* Footer Mobile */
+@media (max-width: 768px) {
+    .footer {
+        padding: var(--space-xl) 0 var(--space-lg);
+    }
+
+    .footer__content {
+        gap: var(--space-lg);
+    }
+
+    .footer__brand h3 {
+        font-size: 1.1rem;
+    }
+
+    .footer__lema {
+        font-size: 0.9rem;
+    }
+
+    .footer__logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    .footer__info h4 {
+        font-size: 0.95rem;
+    }
+
+    .footer__info p {
+        font-size: 0.88rem;
+    }
+
+    .footer__bottom {
+        padding-top: var(--space-md);
+        font-size: 0.85rem;
+    }
+
+    .footer__sarava {
+        font-size: 0.9rem;
+    }
+}
+
+/* Localizacao Mobile */
+@media (max-width: 768px) {
+    .localizacao__content {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    .localizacao__info {
+        text-align: center;
+    }
+
+    .localizacao__mapa iframe {
+        height: 280px;
+        border-radius: var(--radius-md);
+    }
+
+    .endereco h3,
+    .horarios h3 {
+        font-size: 1rem;
+    }
+
+    .endereco p,
+    .horarios p {
+        font-size: 0.9rem;
+    }
+}
+
+/* CTA Mobile */
+@media (max-width: 768px) {
+    .cta {
+        padding: var(--space-xl) 0;
+    }
+
+    .cta__content h2 {
+        font-size: 1.4rem;
+    }
+
+    .cta__content p {
+        font-size: 0.92rem;
+        margin-bottom: var(--space-md);
+    }
+
+    .cta__buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-sm);
+    }
+
+    .cta__buttons .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* Cookie Banner Mobile */
+@media (max-width: 576px) {
+    .cookie-banner {
+        padding: var(--space-md);
+    }
+
+    .cookie-banner__text h4 {
+        font-size: 1rem;
+    }
+
+    .cookie-banner__text p {
+        font-size: 0.85rem;
+    }
+
+    .cookie-banner__actions {
+        flex-direction: column;
+        gap: var(--space-xs);
+    }
+
+    .cookie-btn {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* Modal Mobile */
+@media (max-width: 576px) {
+    .modal {
+        padding: var(--space-sm);
+    }
+
+    .modal__content {
+        padding: var(--space-lg);
+        max-height: 90vh;
+    }
+
+    .modal__content h2 {
+        font-size: 1.3rem;
+        padding-right: var(--space-xl);
+    }
+
+    .modal__content h3 {
+        font-size: 1rem;
+    }
+
+    .modal__content p,
+    .modal__content li {
+        font-size: 0.88rem;
+    }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero__logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .hero__title {
+        font-size: 1.4rem;
+    }
+
+    .hero__title span {
+        font-size: 1.3rem;
+    }
+
+    .section__title {
+        font-size: 1.3rem;
+    }
+
+    .dia__card,
+    .orixa__card,
+    .teologia__card,
+    .fundamento__card {
+        padding: var(--space-sm) var(--space-md);
+    }
+
+    .timeline__marker {
+        width: 30px;
+        height: 30px;
+    }
+
+    .marker__numero {
+        font-size: 0.75rem;
+    }
+}
+
+/* Touch improvements */
+@media (hover: none) and (pointer: coarse) {
+    .btn,
+    .filter__btn,
+    .gira__btn,
+    .sidebar__link {
+        min-height: 44px;
+    }
+
+    .orixa__card:hover,
+    .teologia__card:hover,
+    .fundamento__card:hover {
+        transform: none;
+    }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: var(--space-xl) 0;
+    }
+
+    .hero__logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .hero__content {
+        padding: var(--space-md);
+    }
+
+    .hero__buttons {
+        flex-direction: row;
+        max-width: 100%;
+    }
+
+    .hero__buttons .btn {
+        flex: 1;
+        max-width: 200px;
+    }
+}
+
+/* Safe area for notched devices */
+@supports (padding: max(0px)) {
+    .sidebar {
+        padding-left: max(var(--space-sm), env(safe-area-inset-left));
+        padding-right: max(var(--space-sm), env(safe-area-inset-right));
+    }
+
+    .footer {
+        padding-bottom: max(var(--space-lg), env(safe-area-inset-bottom));
+    }
+
+    .cookie-banner {
+        padding-bottom: max(var(--space-md), env(safe-area-inset-bottom));
+    }
+}
+
 /* Print */
 @media print {
     .sidebar, .sidebar__toggle, .sidebar__overlay, .cta, .footer, .cookie-banner, .modal {
