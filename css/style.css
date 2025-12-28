@@ -4378,12 +4378,28 @@ body.has-page-header .sidebar__toggle {
     .fundamento__card h3 {
         font-size: 1.1rem;
         margin-bottom: var(--space-sm);
+        padding-right: 0;
     }
 
     .teologia__card p,
     .fundamento__card p {
         font-size: 0.92rem;
         line-height: 1.6;
+    }
+
+    /* Números dos fundamentos - mobile */
+    .fundamento__number {
+        position: relative;
+        top: auto;
+        right: auto;
+        font-size: 1.5rem;
+        opacity: 0.4;
+        margin-bottom: var(--space-xs);
+        display: block;
+    }
+
+    .fundamento__card {
+        padding: var(--space-lg);
     }
 }
 
