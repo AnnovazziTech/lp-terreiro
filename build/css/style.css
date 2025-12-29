@@ -573,6 +573,16 @@ body.has-page-header .sidebar__toggle {
 
 /* Desktop: Sidebar com controle manual */
 @media (min-width: 1100px) {
+    /* Page header cobre toda a largura, com fundo no canto do sidebar */
+    .page-header {
+        left: 0;
+        padding-left: calc(var(--sidebar-collapsed-width) + 20px);
+    }
+
+    body.sidebar-expanded .page-header {
+        padding-left: calc(var(--sidebar-width) + 20px);
+    }
+
     .sidebar {
         transform: translateX(0);
         width: var(--sidebar-collapsed-width);
@@ -2187,6 +2197,109 @@ body.has-page-header .sidebar__toggle {
     max-width: 550px;
     margin: 0 auto var(--space-lg);
     font-size: 1.05rem;
+}
+
+.cta__buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+/* CTA Plataforma de Estudos */
+.cta--plataforma {
+    background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a2e 100%);
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.cta--plataforma .cta__content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta--plataforma .cta__icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--space-lg);
+}
+
+.cta--plataforma .cta__icon svg {
+    color: var(--accent-gold);
+    filter: drop-shadow(0 0 10px rgba(201, 162, 39, 0.3));
+}
+
+.cta--plataforma h2 {
+    color: var(--text-light);
+    font-size: 1.8rem;
+    margin-bottom: var(--space-md);
+}
+
+.cta--plataforma p {
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+}
+
+.cta__features {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-xl);
+}
+
+.cta__feature {
+    background: rgba(201, 162, 39, 0.15);
+    border: 1px solid rgba(201, 162, 39, 0.3);
+    color: var(--accent-gold);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.cta--plataforma .btn--lg {
+    padding: var(--space-md) var(--space-2xl);
+    font-size: 1.05rem;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.cta--plataforma .btn--lg svg {
+    transition: transform var(--transition-fast);
+}
+
+.cta--plataforma .btn--lg:hover svg {
+    transform: translateX(4px);
+}
+
+.cta__note {
+    margin-top: var(--space-md) !important;
+    font-size: 0.85rem !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .cta--plataforma h2 {
+        font-size: 1.4rem;
+    }
+
+    .cta__features {
+        gap: var(--space-sm);
+    }
+
+    .cta__feature {
+        font-size: 0.8rem;
+        padding: var(--space-xs) var(--space-sm);
+    }
+
+    .cta--plataforma .btn--lg {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
 }
 
 /* ===================================

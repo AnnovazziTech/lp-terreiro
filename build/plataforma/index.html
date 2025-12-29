@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://*.supabase.co; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://cdn.jsdelivr.net; img-src 'self' data: https:; frame-src 'self'">
+    <title>Curso Sacerdotal de Umbanda - Formação Completa</title>
+    <link rel="stylesheet" href="styles.css?v=2.5">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Botão Menu Mobile -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Abrir menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <div class="header-title">
+                <h1>🕯️ Curso Sacerdotal de Umbanda</h1>
+                <p class="subtitle">Formação Completa - 8 Módulos | 320 Horas</p>
+            </div>
+            <div class="user-info-header">
+                <span class="user-greeting" id="userGreeting">Carregando...</span>
+                <button class="btn-logout-header" onclick="logout()" title="Sair">
+                    🚪 Sair
+                </button>
+            </div>
+        </div>
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar">
+                <span class="progress-text" id="progressText">0% Concluído</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overlay para fechar menu mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeMobileMenu()"></div>
+
+    <div class="main-container">
+        <!-- Sidebar de Navegação -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header-mobile">
+                <h2>📚 Módulos</h2>
+                <button class="close-sidebar-btn" onclick="closeMobileMenu()" aria-label="Fechar menu">
+                    ✕
+                </button>
+            </div>
+            <h2 class="sidebar-title-desktop">📚 Módulos do Curso</h2>
+            <nav class="modules-nav" id="modulesNav">
+                <!-- Será preenchido dinamicamente pelo JavaScript -->
+            </nav>
+        </aside>
+
+        <!-- Área Principal de Conteúdo -->
+        <main class="content-area">
+            <!-- Welcome Screen -->
+            <div id="welcomeScreen" class="welcome-screen">
+                <div class="welcome-content">
+                    <h1>✨ Bem-vindo ao Estudo de Umbanda ✨</h1>
+                    <p class="welcome-intro">
+                        Este curso completo de estudo profundo da Umbanda irá guiá-lo através dos fundamentos,
+                        história e teologia em 8 módulos profundos e interativos.
+                    </p>
+
+                    <div class="course-info">
+                        <div class="info-card">
+                            <h3>📖 Conteúdo</h3>
+                            <p>83 aulas completas</p>
+                            <p>320 horas de estudo</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>🎯 Objetivos</h3>
+                            <p>Formação sacerdotal</p>
+                            <p>Conhecimento profundo</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>✅ Avaliação</h3>
+                            <p>Quiz por aula</p>
+                            <p>Feedback imediato</p>
+                        </div>
+                    </div>
+
+                    <div class="lesson-overview">
+                        <h2>📋 Programa do Módulo 1</h2>
+                        <ul class="lesson-list">
+                            <li><strong>Aula 1:</strong> Apresentação e Contexto Histórico da Escravidão</li>
+                            <li><strong>Aula 2:</strong> Raízes Africanas da Umbanda (Iorubá e Bantu)</li>
+                            <li><strong>Aula 3:</strong> Raízes Indígenas e Católicas</li>
+                            <li><strong>Aula 4:</strong> Influência Kardecista e Codificação Espírita</li>
+                            <li><strong>Aula 5:</strong> O Nascimento da Umbanda (1908)</li>
+                            <li><strong>Aula 6:</strong> Expansão e Variações da Umbanda</li>
+                            <li><strong>Aula 7:</strong> As Sete Linhas da Umbanda</li>
+                            <li><strong>Aula 8:</strong> Entidades Espirituais</li>
+                            <li><strong>Aula 9:</strong> Fundamentos Doutrinários e Éticos</li>
+                            <li><strong>Aula 10:</strong> Consolidação e Avaliação</li>
+                        </ul>
+                    </div>
+
+                    <div class="lesson-overview">
+                        <h2>📋 Programa do Módulo 2 - Teologia e Cosmologia</h2>
+                        <ul class="lesson-list">
+                            <li><strong>Aula 11:</strong> Deus Único: Olorum/Zambi e a Cosmologia Divina</li>
+                            <li><strong>Aula 12:</strong> A Trindade Divina e a Manifestação Tríplice</li>
+                            <li><strong>Aula 13:</strong> As Sete Linhas da Umbanda: Estrutura Hierárquica</li>
+                            <li><strong>Aula 14:</strong> Os Orixás: Natureza, Função e Hierarquia (Parte 1)</li>
+                            <li><strong>Aula 15:</strong> Os Orixás: Natureza, Função e Hierarquia (Parte 2)</li>
+                            <li><strong>Aula 16:</strong> Planos Espirituais: Aruanda, Umbral e Terra</li>
+                            <li><strong>Aula 17:</strong> Lei do Karma - Lei de Causa e Efeito</li>
+                            <li><strong>Aula 18:</strong> Reencarnação e Evolução Espiritual</li>
+                            <li><strong>Aula 19:</strong> Mediunidade: Tipos e Desenvolvimento</li>
+                            <li><strong>Aula 20:</strong> Consolidação: Química Astral e Filosofia Umbandista</li>
+                        </ul>
+                    </div>
+
+                    <button class="btn-primary btn-start" onclick="startCourse()">
+                        Iniciar Curso 🚀
+                    </button>
+                </div>
+            </div>
+
+            <!-- Conteúdo da Aula -->
+            <div id="lessonContent" class="lesson-content" style="display: none;">
+                <div class="lesson-header">
+                    <h1 id="lessonTitle"></h1>
+                    <p class="lesson-meta" id="lessonMeta"></p>
+                </div>
+
+                <div id="lessonBody" class="lesson-body">
+                    <!-- Conteúdo será inserido dinamicamente -->
+                </div>
+
+                <div class="lesson-navigation">
+                    <button id="prevBtn" class="btn-secondary" onclick="previousLesson()">
+                        ← Aula Anterior
+                    </button>
+                    <button id="nextBtn" class="btn-primary" onclick="nextLesson()">
+                        Próxima Aula →
+                    </button>
+                </div>
+            </div>
+
+            <!-- Área de Quiz -->
+            <div id="quizSection" class="quiz-section" style="display: none;">
+                <div class="quiz-header">
+                    <h2>📝 Quiz da Aula <span id="quizLessonNumber"></span></h2>
+                    <p>Teste seus conhecimentos sobre o conteúdo estudado!</p>
+                </div>
+
+                <div id="quizQuestions" class="quiz-questions">
+                    <!-- Perguntas serão inseridas dinamicamente -->
+                </div>
+
+                <div id="quizResults" class="quiz-results" style="display: none;">
+                    <h3>Resultado do Quiz</h3>
+                    <div class="results-summary">
+                        <div class="score-circle" id="scoreCircle">
+                            <span id="scorePercentage">0%</span>
+                        </div>
+                        <div class="results-details">
+                            <p><strong>Acertos:</strong> <span id="correctAnswers">0</span></p>
+                            <p><strong>Erros:</strong> <span id="wrongAnswers">0</span></p>
+                            <p><strong>Total:</strong> <span id="totalQuestions">0</span></p>
+                        </div>
+                    </div>
+                    <div class="results-message" id="resultsMessage"></div>
+                    <div class="results-actions">
+                        <button class="btn-secondary" onclick="retakeQuiz()">
+                            🔄 Refazer Quiz
+                        </button>
+                        <button class="btn-primary" onclick="completeLesson()">
+                            ✅ Concluir Aula
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal de Conclusão -->
+    <div id="completionModal" class="modal">
+        <div class="modal-content">
+            <h2>🎉 Parabéns!</h2>
+            <p>Você concluiu a aula com sucesso!</p>
+            <button class="btn-primary" onclick="closeCompletionModal()">Continuar</button>
+        </div>
+    </div>
+
+    <!-- Botão Flutuante para abrir módulos (mobile) -->
+    <button class="fab-modules" id="fabModules" onclick="toggleMobileMenu()" aria-label="Abrir módulos">
+        📚
+    </button>
+
+    <!-- Scripts -->
+    <!-- Supabase CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js?v=2.1"></script>
+
+    <!-- Dados do Curso - Módulos 1-2 -->
+    <script src="data.js?v=2.4"></script>
+    <!-- Dados do Curso - Módulos 3-8 (NOVO) -->
+    <script src="course_data_modulos_3_8.js?v=2.2"></script>
+    <script src="quiz.js?v=3.1"></script>
+    <script src="app.js?v=3.3"></script>
+</body>
+
+</html>

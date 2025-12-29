@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://*.supabase.co; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://cdn.jsdelivr.net; img-src 'self' data: https:; frame-src 'self'">
+    <title>Login - Curso Sacerdotal de Umbanda</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+            padding: 2rem;
+        }
+
+        .login-box {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 3rem;
+            max-width: 450px;
+            width: 100%;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .login-header h1 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .login-header .icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .login-header p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #3b82f6 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(30, 64, 175, 0.3);
+        }
+
+        .btn-login:disabled {
+            background: var(--border-color);
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .error-message {
+            background: #fee2e2;
+            color: #dc2626;
+            padding: 0.8rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            display: none;
+            animation: shake 0.5s ease;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+            margin-left: 0.5rem;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .password-toggle {
+            position: relative;
+        }
+
+        .password-toggle button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .login-footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        /* Responsividade Completa */
+        @media (max-width: 768px) {
+            .login-container {
+                padding: 1.5rem;
+            }
+
+            .login-box {
+                padding: 2.5rem;
+                max-width: 500px;
+            }
+
+            .login-header h1 {
+                font-size: 1.6rem;
+            }
+
+            .login-header .icon {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .login-container {
+                padding: 1rem;
+            }
+
+            .login-box {
+                padding: 2rem;
+            }
+
+            .login-header h1 {
+                font-size: 1.4rem;
+            }
+
+            .login-header .icon {
+                font-size: 3rem;
+            }
+
+            .login-header p {
+                font-size: 0.9rem;
+            }
+
+            .form-group label {
+                font-size: 0.85rem;
+            }
+
+            .form-group input {
+                padding: 0.7rem 0.9rem;
+                font-size: 0.95rem;
+            }
+
+            .btn-logout, .btn-refresh, .btn-export {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.95rem;
+            }
+
+            .login-footer {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 0.5rem;
+            }
+
+            .login-box {
+                padding: 1.5rem;
+                border-radius: 15px;
+            }
+
+            .login-header h1 {
+                font-size: 1.2rem;
+            }
+
+            .login-header .icon {
+                font-size: 2.5rem;
+            }
+
+            .login-header p {
+                font-size: 0.85rem;
+            }
+
+            .form-group {
+                margin-bottom: 1.25rem;
+            }
+
+            .form-group label {
+                font-size: 0.8rem;
+            }
+
+            .form-group input {
+                padding: 0.65rem 0.85rem;
+                font-size: 0.9rem;
+            }
+
+            .btn-login {
+                padding: 0.85rem;
+                font-size: 1rem;
+            }
+
+            .login-footer {
+                font-size: 0.75rem;
+                margin-top: 1.5rem;
+                padding-top: 1.5rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .login-header h1 {
+                font-size: 1.1rem;
+            }
+
+            .form-group input {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <div class="icon">🕯️</div>
+                <h1>Curso Sacerdotal de Umbanda</h1>
+                <p>Entre para continuar seus estudos</p>
+            </div>
+
+            <div id="errorMessage" class="error-message"></div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="seu@email.com"
+                        required
+                        autocomplete="email"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <div class="password-toggle">
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="••••••••"
+                            required
+                            autocomplete="current-password"
+                        >
+                        <button type="button" onclick="togglePassword()" title="Mostrar/Ocultar senha">
+                            👁️
+                        </button>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-login" id="loginBtn">
+                    Entrar
+                </button>
+            </form>
+
+            <div class="login-footer">
+                <p>Problemas para acessar? Entre em contato com o administrador</p>
+                <p style="margin-top: 0.5rem; font-weight: 600;">Saravá! Axé! 🕯️✨</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Supabase CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js?v=2.1"></script>
+
+    <script>
+        // Elementos
+        const loginForm = document.getElementById('loginForm');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const loginBtn = document.getElementById('loginBtn');
+        const errorMessage = document.getElementById('errorMessage');
+
+        // Verificar se já está logado
+        (async () => {
+            const user = await getCurrentUser();
+            if (user) {
+                // Redirecionar baseado no role
+                if (user.profile?.role === 'admin') {
+                    window.location.href = 'admin-dashboard.html';
+                } else {
+                    window.location.href = 'index.html';
+                }
+            }
+        })();
+
+        // Função de login
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const email = emailInput.value.trim();
+            const password = passwordInput.value;
+
+            // Validação básica
+            if (!email || !password) {
+                showError('Por favor, preencha todos os campos');
+                return;
+            }
+
+            // Desabilitar botão
+            loginBtn.disabled = true;
+            loginBtn.innerHTML = 'Entrando<span class="loading-spinner"></span>';
+
+            // Fazer login
+            const result = await login(email, password);
+
+            if (result.success) {
+                // Sucesso!
+                console.log('✅ Login bem-sucedido!');
+                console.log('👤 Usuário:', result.user.email);
+                console.log('📋 Perfil:', result.profile);
+                console.log('🎭 Role:', result.profile?.role);
+
+                loginBtn.innerHTML = '✓ Sucesso! Redirecionando...';
+
+                // Aguardar um pouco mais para garantir que tudo está pronto
+                await new Promise(resolve => setTimeout(resolve, 800));
+
+                // Redirecionar baseado no role
+                const role = result.profile?.role || 'student';
+                console.log('🔄 Redirecionando para:', role === 'admin' ? 'admin-dashboard.html' : 'index.html');
+
+                if (role === 'admin') {
+                    window.location.href = 'admin-dashboard.html';
+                } else {
+                    window.location.href = 'index.html';
+                }
+            } else {
+                // Erro
+                loginBtn.disabled = false;
+                loginBtn.innerHTML = 'Entrar';
+
+                let errorMsg = 'Erro ao fazer login. Verifique suas credenciais.';
+
+                if (result.error.includes('Invalid login credentials')) {
+                    errorMsg = 'Email ou senha incorretos';
+                } else if (result.error.includes('Email not confirmed')) {
+                    errorMsg = 'Email ainda não confirmado';
+                }
+
+                showError(errorMsg);
+            }
+        });
+
+        // Mostrar mensagem de erro
+        function showError(message) {
+            errorMessage.textContent = message;
+            errorMessage.classList.add('show');
+
+            setTimeout(() => {
+                errorMessage.classList.remove('show');
+            }, 5000);
+        }
+
+        // Toggle visibilidade da senha
+        function togglePassword() {
+            const type = passwordInput.type === 'password' ? 'text' : 'password';
+            passwordInput.type = type;
+        }
+
+        // Limpar erro ao digitar
+        emailInput.addEventListener('input', () => {
+            errorMessage.classList.remove('show');
+        });
+
+        passwordInput.addEventListener('input', () => {
+            errorMessage.classList.remove('show');
+        });
+    </script>
+</body>
+</html>
