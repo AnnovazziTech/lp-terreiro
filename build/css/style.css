@@ -577,18 +577,15 @@ body.has-page-header .sidebar__toggle {
 
 /* Desktop: Sidebar com controle manual */
 @media (min-width: 1100px) {
-    /* Page header não cobre o sidebar no desktop */
+    /* Page header cobre toda a largura, sidebar fica por cima */
     .page-header {
-        left: var(--sidebar-collapsed-width);
-    }
-
-    body.sidebar-expanded .page-header {
-        left: var(--sidebar-width);
+        left: 0;
     }
 
     .sidebar {
         transform: translateX(0);
         width: var(--sidebar-collapsed-width);
+        z-index: 1003;
     }
 
     .sidebar.expanded {
