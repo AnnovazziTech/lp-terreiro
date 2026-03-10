@@ -300,12 +300,7 @@ body.has-page-header {
     padding-top: 0;
 }
 
-body.has-page-header main {
-    padding-top: 56px;
-}
-
-body.has-page-header main > .hero:first-child {
-    margin-top: -56px;
+body.has-page-header .hero {
     padding-top: 56px;
 }
 
@@ -331,12 +326,7 @@ body.has-page-header .sidebar__toggle {
         font-size: 0.85rem;
     }
 
-    body.has-page-header main {
-        padding-top: 52px;
-    }
-
-    body.has-page-header main > .hero:first-child {
-        margin-top: -52px;
+    body.has-page-header .hero {
         padding-top: 52px;
     }
 
@@ -362,12 +352,7 @@ body.has-page-header .sidebar__toggle {
         letter-spacing: 0.3px;
     }
 
-    body.has-page-header main {
-        padding-top: 48px;
-    }
-
-    body.has-page-header main > .hero:first-child {
-        margin-top: -48px;
+    body.has-page-header .hero {
         padding-top: 48px;
     }
 
