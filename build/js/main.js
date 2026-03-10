@@ -285,15 +285,27 @@ function initSmoothScroll() {
             const target = document.querySelector(href);
 
             if (target) {
-                // Get header height if exists, otherwise use page-header or default
-                const pageHeader = document.querySelector('.page-header');
-                const headerHeight = pageHeader ? pageHeader.offsetHeight : 56;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+                // Função para executar o scroll
+                const performScroll = () => {
+                    // Get header height if exists, otherwise use page-header or default
+                    const pageHeader = document.querySelector('.page-header');
+                    const headerHeight = pageHeader ? pageHeader.offsetHeight : 56;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
 
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                };
+
+                // Se o sidebar está ativo (mobile), aguarda ele fechar antes de scrollar
+                const sidebar = document.getElementById('sidebar');
+                if (sidebar && sidebar.classList.contains('active')) {
+                    // Aguarda o sidebar fechar e o overflow ser restaurado
+                    setTimeout(performScroll, 350);
+                } else {
+                    performScroll();
+                }
             }
         });
     });
